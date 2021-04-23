@@ -1,0 +1,191 @@
+  /* **********************************
+  
+  styles for Contact Us page
+  
+  ****************************************/
+  .contact-content-wrap {
+      h4 {
+        font-weight: 700;
+      }
+  }
+  .contact-info-wrap {
+      ul {
+          padding-left: 0!important;
+          list-style: none;
+      }
+    // justify-content: center;
+    // padding: 1rem;
+    // display: flex;
+    // flex-flow: row;
+    margin: 1rem 0;
+    // margin-top: 2rem;
+    // align-items: center;
+     li:before {
+        content: "" !important;
+    }
+    h5 {
+        color: $red;
+        font-size: .9rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    img {
+        margin: 0 3rem 0 0;
+        width: 200px;
+    }
+}
+
+.contact-form select#State, .contact-form .mktoFieldDescriptor.mktoFormCol, .contact-form input#Email, .contact-form input#Company, .contact-form input#LastName, .contact-form input#FirstName, .contact-form .mktoFieldWrap, .mktoHtmlText.mktoHasWidth, select#Country, input#LastName, .contact-form input#Title, .contact-form input#Phone {
+	width: 100% !important;
+	margin-left: 0rem !important;
+}
+// .mktoHtmlText.mktoHasWidth a {
+//     color: #bed8ff;
+//     text-decoration: underline;
+// }
+// .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+//     width: 25px !important;
+// }
+// .contact-form .mktoForm .mktoFormCol .mktoLabel, .mktoHtmlText.mktoHasWidth {
+// 	color: $font-col;
+// }
+
+.contact-form {
+    // border-radius: 10px !important;
+    // background: #22201F !important;
+    padding: 1rem!important;
+    label#LblFirstName, label#LblLastName ,label#LblCompany ,label#LblTitle , label#LblEmail ,label#LblPhone ,label#LblCountry, label#LblHelp_Question__c{
+        display: none !important;
+    }
+    .mktoAsterix {
+        display: none !important;
+    }
+    form {
+        width: 100% !important;
+    }
+    textarea#Help_Question__c {
+        width: 100% !important;
+        margin-top: .3rem !important;
+        height: 150px !important;
+        margin-bottom: 1rem !important;
+    }
+    .mktoForm input[type=text],.mktoForm input[type=email], .mktoForm input[type=tel] ,.mktoForm select.mktoField{
+        height: 3.5em !important;
+        margin-bottom: 8px;
+    }
+    .mktoFieldDescriptor {
+       .mktoFormCol {
+            min-height: 1.5rem;
+        }
+        color: $font-col;
+        display: flex;
+        label#LblNetworkEvolution {
+            width: 100% !important;
+        }
+        label#LbliPMediaIntelligence {
+            width: 100% !important;
+            padding-left: 8px !important;
+        }
+        label#LblembeddedSolutionsDataCenterPlatforms {
+            width: 100% !important;
+        }
+        .mktoFieldWrap {
+            display: flex;
+            float: left !important;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+    }
+    strong {
+        color: $font-col !important;
+    }
+    select#Country {
+        color: #737373;
+    }
+    .mktoHtmlText {
+        color: $font-col !important;
+        a {
+            color: $font-col !important;
+        }
+    }
+    .mktoButtonRow {
+        width: 100% !important;
+        display: flex !important;
+        margin-top: 1rem !important;
+      
+        }
+        .mktoButtonWrap.mktoNative {
+            width: 100% !important;
+            margin: .8rem 0 !important;
+        }
+        .mktoForm .mktoFormCol .mktoLabel {
+            width: 300px !important;
+        }
+    .mktoForm .mktoButtonWrap button.mktoButton {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+            // change the default color
+            padding: 8px 30px !important;
+            background: linear-gradient(51deg,#334c9d 0,#912bc4 57%,#dd1c4c 100%) border-box !important;
+            background-size: 150% 100% !important;
+            background-repeat: no-repeat !important;
+            color: #fff;
+            border-radius: 25px !important;
+            -webkit-transition: all .5s ease !important;
+            transition: all .5s ease !important;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all .5s ease !important;
+            text-transform: uppercase !important;
+            border: 0px solid !important;
+            &:hover {
+                background: linear-gradient(51deg,#334c9d 0,#912bc4 57%,#dd1c4c 100%) border-box !important;
+                background-position: 90% 0 !important;
+                moz-transition: all .4s ease-in-out !important;
+                -o-transition: all .4s ease-in-out !important;
+                -webkit-transition: all .4s ease-in-out !important;
+                transition: all .4s ease-in-out!important;
+                border: 0px solid !important;
+                color: white!important;
+            }
+            label#LblDevices_Interest_Score__c {
+                margin-bottom: 1.5rem;
+            }
+    }
+    label#LblDigital_Engagement_Communication_Inter__c > .mktoAsterix {
+        padding-left: 8px !important;
+    }
+}
+.broad-band-form {
+    .mktoFieldWrap {
+        display: flex;
+        float: left !important;
+        flex-direction: column !important;
+    }
+    .mktoForm .mktoFormCol .mktoLabel {
+        width: 100% !important;
+    }
+    .mktoForm textarea.mktoField {
+        width: 100% !important;
+    }
+   .mktoForm select.mktoField {
+        width: 100% !important;
+    }
+    .mktoForm textarea.mktoField {
+        height: 40px !important;
+    }
+    label {
+        font-weight: 700;
+    }
+    textarea#Help_Question__c {
+        margin-bottom: -.5rem!important;
+    }
+    .mktoForm .mktoGutter {
+        height: .5rem;
+    }
+    option {
+        padding: 5px 0;
+    }
+   
+}

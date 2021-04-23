@@ -1,0 +1,35 @@
+{# Home: list of products #}
+{# get the value of animation speed #}
+{% if content.field_animation_delay %}
+{% set speed = paragraph.field_animation_delay.value %}
+{% endif %}
+
+
+<a href="{% spaceless %}{{content.field_learn_more|render|remove_html_comments}}{% endspaceless %}">
+	<div class="col-lg-3 mb-4">
+		<div class="home-block p-4 h-100 d-flex flex-column pb-5 cursor-pointer" style="background-image:url('{% spaceless %}{{content.field_backgro|render|remove_html_comments}}{% endspaceless %}')"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="{{ speed }}" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+
+
+			<div class="home-block--content position-relative z-10">
+				<img class="mb-2 w-75 mx-auto d-block" src="{% spaceless %}{{content.field_logo|render|remove_html_comments}}{% endspaceless %}" alt="">
+				<h4 class="text-white text-align-center font-weight-med mb-3">{{content.field_title_optional}}</h4>
+				<p class="text-white text-center">
+					{% spaceless %}
+						{{content.field_short_description|render|remove_html_comments}}
+					{% endspaceless %}
+				</p>
+			</div>
+
+			<a class="mt-auto mx-auto position-relative z-10" href="{% spaceless %}{{content.field_learn_more|render|remove_html_comments}}{% endspaceless %}">
+				<div class="mt-3 btn-read-more btn-read-more--small">
+					<span>Learn More</span>
+					<span class="icon-long-arrow-righttrendy"></span>
+				</div>
+			</a>
+
+		</div>
+	</div>
+</a>
+
+
+

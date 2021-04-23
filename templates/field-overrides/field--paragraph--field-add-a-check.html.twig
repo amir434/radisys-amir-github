@@ -1,0 +1,21 @@
+{% if label_hidden %}
+	{% if multiple %}
+
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+
+	{% else %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% endif %}
+{% else %}
+	{% if multiple %}{% endif %}
+	{% for item in items %}
+		<p class="text-white">
+			<span class="icon-caret-righttrendy"></span>
+			{{ item.content }}</p>
+	{% endfor %}
+	{% if multiple %}{% endif %}
+{% endif %}

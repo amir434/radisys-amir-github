@@ -1,0 +1,27 @@
+{# Solution page : KEY information panel title #}
+{%
+  set classes = [
+    'solution-key-information-panels-title',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+<section {{ attributes.addClass(classes, 'section-bg', 'pt-5') }}>
+<div class="container"> 
+    <div class="row justify-content-center"> 
+    <div class="col">
+           {# pull contents from paragrapgh #}
+            {% for item in items %}
+                <h2 class="mt-3 text-center">{{ item.content }}</h2>
+            {% endfor %}
+            {# end of main contents #}
+    </div>
+    </div>
+</div>
+</section>
+

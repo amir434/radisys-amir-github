@@ -1,0 +1,12 @@
+<div class="col-lg-6 mb-5">
+	<div class="d-flex">
+		{% if content.field_key_benefit_icon|render %}
+			<div class="flex-grow-1 mr-3 key-benefit--img">{{ content.field_key_benefit_icon }}</div>
+		{% endif %}
+		<div>
+			<h5 class="text-uppercase font-weight-bold">{{ content.field_key_benefit_title }}</h5>
+			<p class="mb-0">{{ content.field_key_benefit_body }}</p>
+		</div>
+	</div>
+
+</div>

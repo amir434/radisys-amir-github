@@ -1,0 +1,40 @@
+<section class="portfolio-solutions pb-5">
+	<div class="container--padding pt-5">
+		<div class="container">
+
+
+			{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+			{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+			{% if label_hidden %}
+				{% if multiple %}
+					{% for item in items %}
+						{{ item.content }}
+					{% endfor %}
+				{% else %}
+					{% for item in items %}
+						{{ item.content }}
+					{% endfor %}
+				{% endif %}
+			{% else %}
+				{#    {{ label }}#}
+				{% if multiple %}{% endif %}
+				{% for item in items %}
+					<h2 class="mb-4 text">{{ item.content }}</h2>
+				{% endfor %}
+				{% if multiple %}{% endif %}
+			{% endif %}
+		</div>
+	</div>

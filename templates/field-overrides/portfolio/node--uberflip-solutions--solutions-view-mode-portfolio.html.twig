@@ -1,0 +1,15 @@
+<div class="col-lg-4 pb-4">
+	<a class="text-decoration-none" href="{% spaceless %}{{content.field_learn_more_link_url|render|remove_html_comments}}{% endspaceless %}">
+<div class="solution-item_portfolio" style="background-image:url('{{ file_url(content.field_background_imnage['#items'].entity.uri.value) }}');">
+	<div class="solution-item_portfolio--content">
+		{{ content.field_solution_title }}
+		{{ content.field_add_short_text_description }}
+        <div class="mt-2 btn-read-more btn-read-more--small">
+			<span>Learn More</span>
+			<span class="icon-long-arrow-righttrendy"></span>
+		</div>
+ 	</div>
+</div>
+
+	</a>
+</div>

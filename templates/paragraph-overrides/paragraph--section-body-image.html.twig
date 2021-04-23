@@ -1,0 +1,34 @@
+{# paragraph: section body image #}
+
+{%
+  set classes = [
+    'section-body-image',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# get the value of image url #}
+{% if content.field_section_body_image %}
+{% set diagramImg = content.field_section_body_image.0['#markup'] %}
+{% endif %}
+
+
+{# image #}
+    <div{{ attributes.addClass(classes) }}>
+            {% block content %}
+    	 {% if diagramImg is not empty %}
+			<div class="row ">
+				<div class="col ">
+					 <img class="w-100" src="{{ diagramImg }}" alt="diagram image">
+				</div>
+			</div>
+			{% else %}
+				{# nothing  #}
+			{% endif %}
+            {% endblock %}
+    </div>
+	{# add another row when optional diagram image is added #}
+		

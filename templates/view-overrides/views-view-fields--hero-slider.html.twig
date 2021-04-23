@@ -1,0 +1,13 @@
+<div class="hero-slide--inner d-flex align-items-center justify-content-center position-relative">
+
+
+  <div class="hero-slide--filter position-absolute w-100 h-100"></div>
+
+  <div class="hero-slide--content bg_dark_left_right d-flex align-items-center w-100 h-100 position-absolute" style="background-image: url('{% spaceless %}{{ fields.field_background_image.content|striptags }}{% endspaceless %}')">
+    <div class="container">
+      <h1 class="text-white">{{ fields.field_big_h1.content|striptags }}</h1>
+      <h2 class="text-white mt-3">{{ fields.field_smaller_h2.content|striptags }}</h2>
+      <div class="mt-5">{{ fields.field_read_more_link.content }}</div>
+    </div>
+  </div>
+</div>

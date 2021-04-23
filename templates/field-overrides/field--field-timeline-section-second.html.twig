@@ -1,0 +1,22 @@
+{# About: Timeline section second field #}
+{%
+  set classes = [
+    'timeline-section',
+    'cd-container',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+<div class="timeline-bg">
+	<section id="cd-timeline" {{ attributes.addClass(classes) }}> 
+         {% for key, item in items %}
+                {{ item.content }}
+        {% endfor %}
+    </section>
+</div>
+

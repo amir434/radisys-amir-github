@@ -1,0 +1,255 @@
+  /* **********************************
+  
+  styles for  Executive age and modal
+  Overwrite modal default style and bugs
+  
+  ****************************************/
+  .generic-page-template {
+    .region-content-second {
+        margin-top: 9rem;
+        margin-bottom: 5rem;
+    }
+  }
+
+
+  .executive-profile-content{
+    p {
+      font-size: .9rem;
+    }
+    padding: 1.5rem;
+    h3 {
+        font-weight: 300;
+        color: #333 !important;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+      }
+      h5 {
+          font-size: .9rem;
+          font-weight: 400;
+          width: 100%;
+          max-width: 340px;
+          line-height: 1.5;
+        }
+      
+      .profile-img-wrapper{ 
+          img {
+              margin-bottom: 1.5rem;
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            max-width: 300px;
+      }
+    }
+    img.logo-img {
+        width: 150px;
+        margin-left: -1rem;
+    }
+}
+
+// for the settings of Modal , overwrite default style and fix icon bugs
+.ui-widget-overlay {
+    background: rgb(0, 0, 0)/*{bgColorOverlay}*/ /*{bgImgUrlOverlay}*/ /*{bgOverlayXPos}*/ /*{bgOverlayYPos}*/ /*{bgOverlayRepeat}*/;
+    opacity: .6/*{opacityOverlay}*/;
+    filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/;
+}
+
+button.ui-dialog-titlebar-close {
+  background:white!important;
+  width: 30px !important;
+  height: 30px !important;
+  right: 1rem !important;
+  top: 38% !important;
+}
+
+#closeButton {
+  text-align: center;
+  background: lightgray;
+  border: unset;
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  border-radius: 50px;
+}
+
+
+// hide spin
+.ajax-progress-throbber { display: none !important; }
+
+
+.ui-dialog-titlebar-close {
+  &:before {
+    content:  url('../img/icons/times.svg');
+    opacity: .3;
+  }
+}
+
+.profile-modal {
+  box-shadow: 0 .6rem 1.5rem rgba(0,0,0,.65)!important;
+  .ui-dialog-content {
+    border-radius: 0 0 10px 10px !important;
+    background-color: white !important;
+  }
+  
+.ui-dialog-titlebar {
+  border-radius: 10px 10px 0 0;
+  background: white;
+  border-color: #e4e4e4;
+}
+}
+// profile (views)
+.profile-row {
+  justify-content: center;
+  // Three columns to start
+  @include row-cols(1);
+  .profile-col {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    border-radius: 8px;
+    img {
+      width: 200px;
+      height: 200px;
+      //width: 100%;
+      align-items: center;
+      max-height: 250px;
+      display: flex;
+      // margin: auto;
+      max-width: 100%;
+      height: auto;
+      // padding: 1rem;
+      -o-object-fit: contain;
+      object-fit: cover;
+      max-width: 250px;
+    }
+    h3 {
+      text-align: center;
+      font-size: 1.6rem !important;
+    }
+  }
+   // four columns from medium breakpoint up
+   @include media-breakpoint-up(md) {
+    @include row-cols(3);
+    .profile-col {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      img {
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        max-width: 100%;
+        height: auto;
+        -o-object-fit: contain;
+        object-fit: cover;
+      }
+  }
+  .executive-profile-teaser{
+    min-height: 350px !important;
+    border-radius: 8px;
+    padding: 1rem !important;
+    h3 {
+      font-size: 1.3rem !important;
+    }
+  }
+}
+  // four columns from medium breakpoint up
+  @include media-breakpoint-up(lg) {
+    @include row-cols(4);
+    .profile-col {
+      img {
+        width: 200px !important;
+        height: 200px !important;
+        -o-object-fit: contain;
+        object-fit: cover;
+       
+      }
+    }
+    .executive-profile-teaser{
+      min-height: 450px !important;
+      border-radius: 8px;
+      padding: 2rem !important;
+      h3 {
+        font-size: 1.6rem !important;
+      }
+    }
+  }
+}
+
+.profile-row-first{
+  h3 {
+    font-weight: 300;
+    color: #333!important;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  justify-content: center;
+  @include row-cols(1);
+  
+    // four columns from medium breakpoint up
+    @include media-breakpoint-up(md) {
+      @include row-cols(2);
+    }
+     // four columns from medium breakpoint up
+  @include media-breakpoint-up(lg) {
+    @include row-cols(4);
+  }
+}
+// each companies tile (views)
+.profile-col {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  border-radius: 8px;
+  img {
+    width: 200px;
+    height: 200px;
+    //width: 100%;
+    align-items: center;
+    max-height: 250px;
+    display: flex;
+    // margin: auto;
+    max-width: 100%;
+    height: auto;
+    // padding: 1rem;
+    -o-object-fit: contain;
+    object-fit: cover;
+    max-width: 250px;
+  }
+ 
+  .executive-profile-teaser{
+    flex-flow: column;
+    min-height: 450px;
+    display: flex;
+    height: 100%;
+    border-radius: 8px;
+    align-items: center;
+    // flex-flow: column;
+    margin: 1rem 0;
+    padding: 2rem;
+    justify-content: space-between;
+   
+    h5 {
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      margin-top: .5rem;
+    }
+    span.icon-chevron-circle-righttrendy.text-red.right-icon {
+      color: red;
+      font-size: 1.3rem;
+      align-self: flex-end;
+      display: flex;
+  }
+  }
+  .mt-5 {
+    margin-top: 1.5rem !important;
+  }
+ 
+  
+  a {
+    text-decoration: none !important;
+  }
+}

@@ -1,0 +1,26 @@
+{# Portofolio: solution body text area #}
+	{%
+  set classes = [
+	'portofolio-solution-body',
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+	{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+
+<div {{ attributes.addClass(classes, 'container', 'mb-5') }}>
+	{% for item in items %}
+		<p>{{ item.content }}</p>
+	{% endfor %}
+</div>
+
+
+

@@ -1,0 +1,23 @@
+{# field: portofolio introduction: contents pulled with paragraph #}
+
+{%
+  set classes = [
+    'product-introduction',
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+
+<div {{ attributes.addClass(classes, 'container') }}>
+	{% for item in items %}
+			<div class="product-introduction-body">
+        {{ item.content }}
+      </div>
+	{% endfor %}
+</div><!-- end of product introduction -->
+
+{# keep: whatever to close tags to prevent from breaking previous developer's settings #}
+{# </div><!-- end a --></div><!-- end b --></div><!-- end product-heading--text ->container --></section><!-- end product-heading--text --></section><!-- end service-section --> #}
+

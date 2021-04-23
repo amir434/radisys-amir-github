@@ -1,0 +1,692 @@
+.node--type-solution-page {
+  .node__submitted {
+    display: none;
+  }
+}
+
+section.uberflip-tile-alernating {
+  padding-top: 5rem;
+  .even--pane {
+    background: #f4f4f6;
+    .row {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+ul.bullet-point-items {
+  padding-left: 1.2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  li {
+    list-style: none;
+    &:before {
+      content: "";
+      border-color: transparent #df1c4c;
+      border-style: solid;
+      border-width: 0.25em 0 0.25em 0.35em;
+      display: block;
+      height: 0;
+      width: 0;
+      left: -1em;
+      top: 1rem;
+      position: relative;
+    }
+  }
+}
+
+.uberflip-item--display {
+  margin-bottom: 1rem;
+  min-height: 28.5rem;
+}
+
+.row.uberflip_panel {
+  .col-lg-6:last-of-type > div {
+    display: none;
+  }
+  .uberflip-item--display {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .uberflip--item_pane {
+    display: flex !important;
+  }
+}
+
+.row.video_panel {
+  .col-lg-6 {
+    &:last-of-type > div {
+      display: none;
+    }
+    &:last-of-type > .video-panel--inner {
+      display: block;
+      border-radius: 10px;
+      // overflow: hidden;
+    }
+  }
+}
+
+.video-embed-field-responsive-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 9;
+  max-width: 37rem;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
+.row.image_panel .col-lg-6:last-of-type > .image-panel,
+.video-panel--inner {
+  position: relative;
+  &:before {
+    width: 100%;
+    height: 100%;
+    background: #e121ce;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#e121ce),
+      to(#dd1c4c)
+    );
+    background: linear-gradient(to right, #e121ce 0, #dd1c4c 100%);
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    content: "";
+    border-radius: 10px;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: -25px;
+    left: -15px;
+    z-index: -15;
+    background-image: url(../img/bg/red-dot.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.even--pane {
+  .row.image_panel .col-lg-6:last-of-type > .image-panel,
+  .video-panel--inner {
+    position: relative;
+    &:before {
+      width: 100%;
+      height: 100%;
+      background: #334c9d;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#334c9d),
+        to(#b141df)
+      );
+      background: linear-gradient(to right, #334c9d 0, #b141df 100%);
+      position: absolute;
+      left: -35px;
+      top: -35px;
+      content: "";
+      border-radius: 10px;
+      z-index: 1;
+    }
+    // &:after {
+    //   content: "";
+    //   width: 15rem;
+    //   height: 15rem;
+    //   position: absolute;
+    //   bottom: -25px;
+    //   left: -55px;
+    //   background-image: url(../img/bg/purple-dot.svg);
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   z-index: 8;
+    // }
+  }
+}
+
+.row.image_panel {
+  // image for the solution panel
+  div img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.28);
+    height: 28.5rem;
+    z-index: 2;
+    position: relative;
+  }
+  .col-lg-6 {
+    &:last-of-type > div {
+      display: none;
+    }
+    &:last-of-type > .image-panel {
+      display: block;
+    }
+  }
+}
+
+.regular-side-panel .bullet-point-items li {
+  margin-bottom: -0.3rem;
+}
+
+.row.image_panel > img {
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.key-benefits-mini.p-4.bg-gray {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.row.key-benefits_panel {
+  .col-lg-6 {
+    &:last-of-type > div {
+      display: none;
+    }
+    &:last-of-type > .key-benefits-mini {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  }
+}
+
+.even--pane {
+  background: #f4f4f6;
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.paragraph-50-50--body.text-lightgray {
+  p{
+    font-size: 1.12rem !important;
+    line-height: 1.8rem;
+  }
+}
+.paragraph-50-50-wrapper{
+  padding: 3.5rem 0;
+}
+.paragraph.paragraph--type--key-benefits-mini.paragraph--view-mode--default {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 0.8rem;
+  &:before {
+    content: "\f0da";
+    font-family: fa-trendy !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: $red;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.uberflip--item_pane {
+  position: relative;
+  height: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 6px 13px 3px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 6px 13px 3px rgba(0, 0, 0, 0.28);
+  z-index: 9;
+  max-height: 28rem;
+  &:before {
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e121ce+0,dd1c4c+100 */
+    background: rgb(225, 33, 206); /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      rgba(225, 33, 206, 1) 0%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(225, 33, 206, 1) 0%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(225, 33, 206, 1) 0%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e121ce', endColorstr='#dd1c4c',GradientType=1 ); /* IE6-9 */
+
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    content: "";
+    border-radius: 10px;
+    z-index: -10;
+  }
+  &:after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    content: "";
+    border-radius: 10px;
+    z-index: -9;
+    background-image: url(../img/bg/hero-slide-deco.svg);
+  }
+}
+
+.key-benefits-mini {
+  position: relative;
+  z-index: 9;
+  &:before {
+    width: 100%;
+    height: 100%;
+    background: #e121ce;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, #e121ce),
+      to(#dd1c4c)
+    );
+    background: linear-gradient(to right, #e121ce 0, #dd1c4c 100%);
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    content: "";
+    border-radius: 10px;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: -25px;
+    left: -15px;
+    z-index: -15;
+    background-image: url(../img/bg/red-dot.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.even--pane {
+  .key-benefits-mini--inner {
+    background: white;
+  }
+  .key-benefits-mini {
+    // position: relative;
+    z-index: 9;
+    &:before {
+      width: 100%;
+      height: 100%;
+      background: #334c9d;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#334c9d),
+        to(#b141df)
+      );
+      background: linear-gradient(to right, #334c9d 0, #b141df 100%);
+      position: absolute;
+      left: -35px;
+      top: -35px;
+      content: "";
+      border-radius: 10px;
+      z-index: -10;
+    }
+    // &:after {
+    //   content: "";
+    //   width: 15rem;
+    //   height: 15rem;
+    //   position: absolute;
+    //   bottom: -25px;
+    //   left: -55px;
+    //   background-image: url(../img/bg/purple-dot.svg);
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   z-index: 8;
+    // }
+  }
+}
+
+.key-benefits-mini--inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  z-index: 99;
+  background: #f8f8f8;
+  padding: 3rem;
+  min-height: 28rem;
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+ul.bullet-point-items li p {
+  font-size: 1.1rem !important;
+  margin: 0;
+}
+
+// .row.uberflip_panel .col-lg-6.side-pane-dynamic {
+//   &:after {
+//     content: "";
+//     width: 15rem;
+//     height: 15rem;
+//     position: absolute;
+//     bottom: -25px;
+//     left: -15px;
+//     z-index: -15;
+//     background-image: url(../img/bg/red-dot.svg);
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//   }
+// }
+
+.even--pane {
+  .uberflip-item--display:after,
+  .key-benefits-mini:after,
+  .video-panel--inner:after,
+  .image-panel:after {
+    left: -60px !important;
+    background-image: url(../img/bg/purple-dot.svg) !important;
+  }
+
+  .uberflip--item_pane {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 6px 13px 3px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 6px 13px 3px rgba(0, 0, 0, 0.28);
+    z-index: 9;
+    &:before {
+      width: 100%;
+      height: 100%;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e121ce+0,dd1c4c+100 */
+      background: rgb(225, 33, 206); /* Old browsers */
+      background: -moz-linear-gradient(
+        left,
+        rgba(225, 33, 206, 1) 0%,
+        rgba(221, 28, 76, 1) 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        left,
+        rgba(225, 33, 206, 1) 0%,
+        rgba(221, 28, 76, 1) 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to right,
+        rgba(225, 33, 206, 1) 0%,
+        rgba(221, 28, 76, 1) 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e121ce', endColorstr='#dd1c4c',GradientType=1 ); /* IE6-9 */
+
+      position: absolute;
+      left: -35px;
+      top: -35px;
+      content: "";
+      border-radius: 10px;
+      z-index: -10;
+    }
+    &:after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: -25px;
+      left: -40px;
+      content: "";
+      border-radius: 10px;
+      z-index: -9;
+      background-image: url(../img/bg/hero-slide-deco.svg);
+    }
+  }
+
+  .row.uberflip_panel .col-lg-6.side-pane-dynamic {
+    .uberflip--item_pane {
+      &:before {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334c9d+0,6a41df+100 */
+        background: rgb(51, 76, 157); /* Old browsers */
+        background: -moz-linear-gradient(
+          left,
+          rgba(51, 76, 157, 1) 0%,
+          #b141df 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          left,
+          rgba(51, 76, 157, 1) 0%,
+          #b141df 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to right,
+          rgba(51, 76, 157, 1) 0%,
+          #b141df 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334c9d', endColorstr='#b141df',GradientType=1 ); /* IE6-9 */
+      }
+    }
+    // &:after {
+    //   content: "";
+    //   width: 15rem;
+    //   height: 15rem;
+    //   position: absolute;
+    //   bottom: -25px;
+    //   left: -55px;
+    //   background-image: url(../img/bg/purple-dot.svg);
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   z-index: 8;
+    // }
+  }
+
+  .video-panel--inner:after {
+  }
+}
+
+.uberflip-item--display {
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.04;
+  }
+  padding: 3rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  color: white;
+  h4,
+  p {
+    color: white;
+  }
+  p {
+    opacity: 0.9;
+  }
+  h4 {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+}
+
+.uberflip--item_pane_img {
+  position: absolute;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.uberflip-item--display_inner {
+  margin-top: auto;
+}
+
+.solution-item_portfolio--content {
+  margin-top: auto;
+  position: relative;
+  z-index: 5;
+  p,
+  p span {
+    color: white;
+  }
+}
+
+.odd--pane .col-lg-6.regular-side-panel {
+  padding-right: 2rem !important;
+  h6 {
+    font-size: 1.1rem;
+  }
+}
+
+.read-article--btn {
+  text-decoration: none !important;
+  transition: all 0.4s ease-out;
+  margin-top: 2rem;
+  display: block;
+  .icon-arrow-righttrendy {
+    transition: all 0.4s ease-out;
+  }
+  &:hover {
+    opacity: 0.8;
+    .icon-arrow-righttrendy {
+      padding-left: 0.4rem;
+    }
+  }
+}
+
+.col-lg-6.side-pane-dynamic {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
+
+.uberflip-item--display {
+  &:after {
+    content: "";
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    z-index: -15;
+    background-image: url(../img/bg/red-dot.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.video-panel--inner,
+.key-benefits-mini,
+.uberflip--item_pane,
+.image-panel {
+  position: sticky !important;
+  top: 155px;
+}
+
+@media only screen and (max-width: 991px) {
+  .col-lg-6.side-pane-dynamic {
+    margin-top: 3rem;
+  }
+  .odd--pane .col-lg-6.regular-side-panel {
+    padding-right: 15px !important;
+  }
+}
+
+// small screen size
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  // uberflip pane
+  .page-node-type-solution-page {
+    .uberflip_panel {
+      .uberflip-item--display {
+        padding: 2rem;
+        h4 {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// header banner BG for solution template
+.node--type-solution-page, .page-node-type-services-page {
+  .header-banner {
+    background-position: right;
+}
+}
+
+
+//---------------- -------------------------
+//        Fix solution template
+// ---------------- -------------------------
+.optional-image--wrapper{
+  img {
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+
+
+//---------------- -------------------------
+//        New section
+// ---------------- -------------------------
+.key-information-panle{
+  .key-information-panel-wrapper {
+  padding: 2rem;
+  height: 100%;
+  }
+  .key-info-panel-title {
+    display: flex;
+    align-items: center;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 1rem;
+    }
+  }
+  
+}
+.section-bg {
+  background: #f8f8f8;
+}

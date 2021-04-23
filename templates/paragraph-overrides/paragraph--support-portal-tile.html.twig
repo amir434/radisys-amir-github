@@ -1,0 +1,59 @@
+{# Support page : tiles of sub support pages #}
+{%
+  set classes = [
+    'col-lg-6',
+    'my-3',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# get the value of logo url #}
+{% if content.field_logo %}
+{% set logo = content.field_logo.0['#markup'] %}
+{% endif %}
+
+{# get the image url value #}
+{% if content.field_background_image %}
+{% set bg_img = content.field_background_image.0['#markup'] %}
+{% endif %}
+
+
+{# get the image url value #}
+{% if bg_img is not empty %}
+{% set overlay_effect = 'overlay-bg-col' %}
+{% else %}
+{# nothing #}
+{% endif %}
+
+
+{# tile #}
+
+{# content #}
+<div {{ attributes.addClass(classes ,'px-3')}}>
+<div class="support-tile bg-white round-corner h-100 shadow-sm py-4">
+<div class="row">
+    <div class="col left-col  {{ overlay_effect}}">
+		<div class="py-5 px-3 relative round-corner " style="background-image: url('{{ bg_img }}');"> 
+             {% if logo is not empty %}
+              <img src="{{ logo }}" alt="logo">
+            {% else %}
+            {# keep the height #}
+            <div class="no-logo"></div>
+            {% endif %}
+        </div>
+    </div>
+     <div class="col right-col d-flex justify-content-center flex-column">
+         <h4 class=" text-bold">{{ content.field_title}}</h4>
+        <div class="support-info-editor">
+          {{ content.field_overview_body}}
+        </div>
+        <div class="tile-link mt-2">
+         {{ content.field_link_url}}
+        </div>
+    </div>
+</div>
+</div>
+</div>

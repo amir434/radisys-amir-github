@@ -1,0 +1,17 @@
+{# Add Heading to Menu #}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+
+{# add Blue Heading #}
+{% for item in items %}
+	<div {{ attributes.addClass(classes ,'mb-2', 'mt-5', 'menu--heading')}}>
+			{{ item.content }}
+	</div>
+{% endfor %}
+

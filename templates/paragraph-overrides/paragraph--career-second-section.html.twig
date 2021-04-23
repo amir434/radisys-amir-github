@@ -1,0 +1,31 @@
+{# Radisys :Career page second section section #}
+{%
+  set classes = [
+    'career-second-section',
+    'container',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+<div class="open-radisys-section-wrapper ">
+ <div{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div class="col-12 col-lg-6 open-radisys-left">
+            {{ content.field_image}}
+        </div>
+        <div class="col-12 col-lg-6 open-radisys-right">
+            <div class="open-radisys-content p-3 pt-4">
+            <h2 class="text-white mr-lg-5 mb-4">
+              {{ content.field_section_header_title}}
+            </h2>
+              {{ content.field_section_body_text}}
+             </div>
+        </div>
+    </div>
+</div>
+</div>

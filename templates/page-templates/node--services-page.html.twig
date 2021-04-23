@@ -1,0 +1,59 @@
+{# services page template and sidebar  #}
+{{ content }}</div>
+{# get the UF ID form the fileld #}
+{% if content.field_uberflip_stearm_id_side %}
+{% set uberFlipID = content.field_uberflip_stearm_id_side.0['#context'].value  %}
+{% endif %}
+
+{# sidebar container #}
+<div class="col-lg-3 uberflip-vertical-col ">
+<div class="uberflip-vertical shadow-lg h-100">
+	<div class="uberflip-vertical_inner">
+		{% for value in get_uberflip_data('bbec2e61e2f220ba85c07fc46239d09406b1bb1e', uberFlipID , 5) %}
+			<hr>
+			<div class="row uberflip-verical_item px-0 py-3 w-100 m-0">
+				<div class="col-lg-4 pl-0 pr-0">
+					<img class="w-100 pl-2" src="{{ value['thumbnail_url'] }}" alt="">
+				</div>
+				<div class="col-lg-8 position-relative">
+					<h6 class="mb-4">
+						{{ value['title'] }}
+					</h6>
+
+					<a href="{{ value['url'] }}" class="read-article mt-1 text-right position-absolute d-block text-uppercase">
+
+						{% if value['type'] == 'blogs' %}
+							<span class="icon-rsstrendy"></span>
+							Read Article
+							<span class="icon-long-arrow-righttrendy"></span>
+						{% elseif value['type'] == 'docs' %}
+							<span class="icon-book-opentrendy"></span>
+							Read Flipbook
+							<span class="icon-long-arrow-righttrendy"></span>
+						{% else %}
+							<span class="icon-youtubetrendy"></span>
+							Watch Video
+							<span class="icon-long-arrow-righttrendy"></span>
+						{% endif %}
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+		{#        Signup Block#}
+	{# {{ drupal_entity('block', 'letsengageonyourterms') }} #}
+
+		{#        Contact us Block#}
+		{# {{ drupal_entity('block', 'contactussidebar') }} #}
+	{% if content.field_sidebar_contents %}
+				{{ content.field_sidebar_contents }}
+	{% else %}				
+	{# nothing #}
+	{% endif %}
+	</div>
+</div>
+</div>{# Close: sidebar  #}
+</div>
+</div>
+
+
+

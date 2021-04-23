@@ -1,0 +1,15 @@
+{# {{content}} #}
+<div class="service-tile_home p-3 py-4" style="background-image:url('{%spaceless %}{{content.field_hero_background_image|render|remove_html_comments}}{% endspaceless%}');">
+	<div class="service-tile_home--content">
+		<img class="service-tile_home--logo w-100" src="{%spaceless %} {{content.field_hero_banner_logo|render|remove_html_comments}}{% endspaceless%}" alt="">
+		{% if content.field_hero_banner_title|render %}
+			<h5 class="text-white text-center my-3">{{content.field_hero_banner_title}}</h5>
+		{% endif %}
+		<p class="text-white text-center">{{content.field_hero_body_text}}</p>
+		<div class="mt-2 btn-read-more btn-read-more--small">
+			<span>Learn More</span>
+			<span class="icon-long-arrow-righttrendy"></span>
+		</div>
+	</div>
+</div>
+{# {{paragraph.field_hero_banner_logo}} #}

@@ -1,0 +1,23 @@
+{# full width contents #}
+{%
+  set classes = [
+    'support-main-full',
+    'col-12',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+<section class="support-main-content-full py-5">
+<div class="container">
+  <div class="row">
+     <div {{ attributes.addClass(classes) }}>
+      {{ content.field_main_content_col}}
+  </div>
+  </div>
+</div>
+</section>

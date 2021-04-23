@@ -1,0 +1,22 @@
+{# tthis is index page title for the partners page : index title #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+<section class="partner-page-index section-space section-space--banner container">
+	<div class="row align-items-center">
+		<div class="col-lg-5">
+			{% if label_hidden %}
+				{% for item in items %}
+					<h2{{item.attributes.addClass(classes,'field__item')}}>{{ item.content }}</h2>
+				{% endfor %}
+			{% endif %}
+		</div>
+	

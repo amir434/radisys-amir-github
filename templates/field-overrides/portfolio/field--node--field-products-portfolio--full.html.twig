@@ -1,0 +1,30 @@
+{# Portofolio: product section #}
+{%
+	set classes = [
+		'portofolio-product-section',	  
+	'field',
+	'field--name-' ~ field_name|clean_class,
+	'field--type-' ~ field_type|clean_class,
+	'field--label-' ~ label_display,
+]
+%}
+
+
+<div {{ attributes.addClass(classes, 'container') }}>
+	<div class="wrapper">
+			{% for item in items %}
+				{% set count = count + 1 %}
+
+				{% if count is odd %}
+						<div class="even-product" data-aos="fade-left" >
+						{{ item.content }}
+						</div>
+				{% else %}
+					<div data-aos="fade-right" >
+						{{ item.content }}
+					</div>
+				{% endif %}
+					
+			{% endfor %}
+	</div>
+</div>

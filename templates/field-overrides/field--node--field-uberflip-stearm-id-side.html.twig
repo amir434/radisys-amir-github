@@ -1,0 +1,16 @@
+{# services template: sidebar UF tiles ID #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# This field is used to pass the UF id value but not display the number#}
+  {% for item in items %}
+       <span{{ item.attributes.addClass(classes, 'd-none') }}>{{ item.content }}</span>
+  {% endfor %}
+

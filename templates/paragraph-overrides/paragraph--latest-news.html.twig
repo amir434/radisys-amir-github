@@ -1,0 +1,12 @@
+{% set newsLearnMore %}
+  {{ content.field_learn_more_url }}
+{% endset %}
+
+<div class="row latest-news_content d-flex justify-content-between">
+  <div class="d-flex align-items-center">
+    <p class="text-white d-inline pl-1 mb-0">{{ content.field_news_headline }}</p>
+  </div>
+  <div class="text-right latest-news_container">
+    <a href="{% spaceless %}{{ newsLearnMore|striptags }}{% endspaceless %}"><button type="button" class="btn btn-link text-white"><span class="icon-chevron-circle-righttrendy mr-2"></span>Learn More</button></a>
+  </div>
+</div>

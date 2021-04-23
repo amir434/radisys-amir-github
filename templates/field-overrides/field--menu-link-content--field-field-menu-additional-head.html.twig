@@ -1,0 +1,31 @@
+{# Add SUB Heading as link to Menu #}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+
+
+
+{# if CTA button exsist #}
+	{% if items is not empty %}
+		{% for item in items %}
+		{# Add #nolink when it is used as text #}
+		{% set url = item.content['#url_title'] %}
+			{% if url == "#nolink" %}
+			<div {{ attributes.addClass(classes ,'mb-2', 'mt-5', 'menu--label','menu--label--link')}}> {{ item.content['#title'] }} 
+			</div> 
+		{% else %}
+                {# print link and text #}
+				<div {{ attributes.addClass(classes ,'mb-2', 'mt-5', 'menu--label','menu--label--link')}}>
+                <a href=" {{ item.content['#url_title'] }}  ">{{ item.content['#title'] }} </a> 
+               
+			</div>  
+		{% endif %}
+	{% endfor %}
+	{% else %}
+	{# notihgn #}
+{% endif %}

@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	{% block content %}
+		<div class="service_page_pull h-100 d-flex align-items-center flex-column" style="background-image:url('{% spaceless %}{{content.field_thumbnail|render|remove_html_comments}}{% endspaceless %}');">
+			<img class="w-75 mx-auto d-block service_page_pull--inner-content mb-3" src="{% spaceless %}{{content.field_sub_logo|render|remove_html_comments}}{% endspaceless %}" alt="">
+			{{content.field_page_header_summary}}
+
+			<div class="mt-2 cursor-pointer btn-read-more btn-read-more--small mt-auto service_page_pull--inner-content">
+				<span>Learn More</span>
+				<span class="icon-long-arrow-righttrendy"></span>
+			</div>
+		</div>
+
+	{% endblock %}
+{% endblock paragraph %}

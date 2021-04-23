@@ -1,0 +1,55 @@
+{# services page : side panels #}
+{%
+  set classes = [
+    'sidebar-panel',
+    'my-3',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# get the image url value #}
+{% if content.field_sidebar_bg_image %}
+{% set bg_img = content.field_sidebar_bg_image.0['#markup'] %}
+{% endif %}
+
+
+{# get the value of option #}
+{% set bg_option = paragraph.field_sidebar_bg_option.value %}
+
+
+{# button link #}
+{% if content.field_sidebar_link %}
+  {% set link = paragraph.field_sidebar_link.0 %} 
+{% endif %}
+
+
+
+{# content #}
+<div {{ attributes.addClass(classes ,'px-3')}}>
+{% if bg_img is not empty %}
+		<div class="py-5 px-3 relative round-corner sidebar-img" style="background-image: url('{{ bg_img }}');"> 
+{% else %}
+		<div class="py-5 px-3 my-4 relative round-corner bg_gradient_pink_top_down"> 
+{% endif %}
+
+     <div class="d-flex justify-content-center flex-column pane-content">
+         <h4 class=" text-bold text-white mb-3">{{ content.field_sidebar_title}}</h4>
+        <div class="side-panel-editor">
+          {{ content.field_sidebar_main_contents}}
+        </div>
+        <div class="mt-4">
+             {% if link is not empty %}
+                 <a class="btn-read-more datasheet-dload-btn text-decoration-none btn-read-more--small d-flex align-content-center justify-content-center" href="{{ link.url }}"> {{ link.title  }} <span class="icon-long-arrow-righttrendy"></span></a>
+                {% else %}
+                {# no button  #}
+                {% endif %}
+        </div>
+    </div>
+
+</div>
+</div>
+

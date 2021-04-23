@@ -1,0 +1,27 @@
+{# Solution template: field_solution_section , to list all solution panels #}
+	{%
+  set classes = [
+'uberflip-tile-alernating',
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+
+{# start content #}
+<section {{ attributes.addClass(classes)}}>
+		{% for key , item in items %}
+			{% set paneValue = key + 1 %}
+			{# add bg color to even panel #}
+			{% if paneValue is even %}
+				<div class="even--pane">
+					{{ item.content }}
+				</div>
+			{% else %}
+				<div class="odd--pane">
+					{{ item.content }}
+				</div>
+			{% endif %}
+		{% endfor %}
+</section>

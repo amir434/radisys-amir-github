@@ -1,0 +1,274 @@
+/* **********************************
+  
+  styles for Support page: main
+  
+  ****************************************/
+
+.support-main-page,
+.support-sub-page {
+  .node__submitted {
+    display: none;
+  }
+}
+
+// section title column
+.support-title {
+  background-image: url("../img/bg/bg-five-pillars.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  // align-items: center;
+  min-height: 400px;
+  justify-content: center;
+  flex-flow: column;
+}
+
+//Form option white bg
+.support-form {
+  padding: 3rem 2rem;
+  position: relative;
+  height: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 12px 25px 3px rgba(0, 0, 0, 0.15);
+}
+
+//form option grey bg
+.support-form-bg {
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  background: #f4f4f6;
+  position: relative;
+  height: 100%;
+  height: 100%;
+  box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.15);
+}
+
+.support-main-content-full {
+  background: #f4f4f6;
+  margin-bottom: -3rem;
+}
+
+
+// -----------------  info section (blue bg area) ----------------
+.section-space-bg {
+  padding: 4rem 0;
+}
+
+.support-page-bottom {
+  background-image: url("../img/bg/ng-showcase.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 0;
+}
+
+// tiles
+span.red-border {
+  height: 4px;
+  background: $red;
+  display: inline-block;
+  width: 80px;
+  margin-bottom: px;
+}
+
+.support-info-col-content,
+.list-of-links {
+
+  // list items
+  a {
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+    color: $blue;
+    margin-bottom: .5rem;
+    font-weight: 700;
+
+    &:before {
+      font-family: "fa-trendy" !important;
+      font-weight: 400;
+      content: "\f0da";
+      padding-right: 0.5rem;
+      color: $blue;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+// ----------------- Support main: tile section----------------
+.support-tile {
+  p {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .no-logo {
+    position: relative;
+    width: 100%;
+    height: 130px;
+  }
+
+  .overlay-bg-col {
+    &:after {
+      border-radius: 10px;
+      content: "";
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      top: -100%;
+      background-color: rgba(black, 0.3);
+    }
+  }
+
+  .left-col {
+    .round-corner{
+      background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    }
+    
+    //logo
+    img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+    }
+  }
+
+  .right-col {
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    a {
+      text-transform: uppercase;
+      cursor: pointer;
+      color: $red;
+      border-radius: 20px;
+      border: 1px solid;
+      padding: 5px 1.5rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &::after {
+        font-family: "fa-trendy";
+        font-weight: 400;
+        content: "\f178";
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.support-sub-list {
+  background: #f4f4f6;
+  margin-top: -1rem !important;
+}
+
+// in editor
+.support-contact {
+  list-style: none;
+
+  span {
+    font-weight: 700;
+    color: $red;
+    padding-right: 10px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+// ===================== Form from external source
+.portal-form {
+  p {
+    font-size: .95rem !important;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  // title
+  h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  // submit button class overwrite
+  .form-submit {
+    margin-top: 2rem;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    // change the default color
+    padding: 8px 30px !important;
+    background: linear-gradient(51deg, #334c9d 0, #912bc4 57%, #dd1c4c 100%) border-box !important;
+    background-size: 150% 100% !important;
+    background-repeat: no-repeat !important;
+    color: #fff;
+    border-radius: 25px !important;
+    -webkit-transition: all .5s ease !important;
+    transition: all .5s ease !important;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all .5s ease !important;
+    text-transform: uppercase !important;
+    border: 0px solid !important;
+
+    &:hover {
+      background: linear-gradient(51deg, #334c9d 0, #912bc4 57%, #dd1c4c 100%) border-box !important;
+      background-position: 90% 0 !important;
+      moz-transition: all .4s ease-in-out !important;
+      -o-transition: all .4s ease-in-out !important;
+      -webkit-transition: all .4s ease-in-out !important;
+      transition: all .4s ease-in-out !important;
+      border: 0px solid !important;
+      color: white !important;
+    }
+  }
+
+  // form layout (overwrite portal form code from old site
+  .form-item {
+    display: flex;
+    flex-flow: column;
+    label {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+    }
+      input[type='text'], input[type="password"] {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #cecece;
+    }
+  }
+}
+
+.bottom-form {
+  a{
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  p {
+    font-size: .95rem;
+  }
+  margin-top: 2rem;
+}
+

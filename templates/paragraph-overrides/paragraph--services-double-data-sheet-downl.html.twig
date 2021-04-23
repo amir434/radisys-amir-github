@@ -1,0 +1,27 @@
+{# Services template: datasheet  #}
+{% set dloadLink %}
+{% spaceless %}
+	{{ content.field_datasheet_download_url }}
+{% endspaceless %}
+{% endset %}
+
+
+<div class="h-100 position-relative datasheet" style="{% if content.field_background_image_optional|render %}background-image:url('{% spaceless %}{{ content.field_background_image_optional|render|remove_html_comments }}{% endspaceless %}');{% endif %}">
+	<div class="info-panel_pattern position-absolute w-100 h-100"></div>
+	<h4 class="text-white datasheet_h4">{{ content.field_panel_title }}</h4>
+	<p class="text-white datasheet_sub_title">
+		<strong>{{ content.field_panel_sub_titile }}</strong>
+	</p>
+	<p class="text-white">{{ content.field_panel_body }}</p>
+	<a class="mt-4 mb-2 btn-read-more datasheet-dload-btn text-decoration-none btn-read-more--small" href="{{ dloadLink|striptags }}">
+		<span class="text-decoration-none">
+			{% if content.field_download_url_button_text|render %}
+				{{ content.field_download_url_button_text }}
+			{% else %}
+				Download Datasheet
+			{% endif %}
+
+		</span>
+		<span class="icon-cloud-downloadtrendy ml-2"></span>
+	</a>
+</div>

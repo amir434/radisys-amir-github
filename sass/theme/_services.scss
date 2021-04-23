@@ -1,0 +1,768 @@
+// Temporary service styles
+.paragraph.paragraph--type--services-header.paragraph--view-mode--default {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.row.services-page {
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+}
+
+.service-overview:first-of-type {
+  position: relative;
+  padding-top: 7rem;
+}
+
+.uberflip-vertical {
+  padding-bottom: 0.1rem;
+  background: rgba(255, 255, 255, 0.93);
+  hr {
+    border-top: 1px solid #eaeaea;
+    margin: 0rem 0rem;
+    &:first-of-type {
+      display: none;
+    }
+  }
+  span {
+    font-size: 0.7rem;
+  }
+  h6 {
+    font-size: 0.9rem;
+  }
+  .read-article {
+    font-size: 0.7rem;
+  }
+  .uberflip-verical_item {
+    transition: all 0.4s ease-out;
+    &:first-of-type {
+      padding-top: 1rem !important;
+    }
+    &:hover {
+      background: #e8e8e8;
+    }
+  }
+}
+
+.uberflip-verical_item {
+  min-height: 102px;
+  .read-article {
+    bottom: 0rem;
+    right: 1rem;
+  }
+  img {
+    object-fit: contain;
+    object-position: center;
+    height: 4rem;
+  }
+}
+
+section.info-panel .info-panel_pane {
+  top: 0;
+}
+
+.page-node-type-services-page {
+  .layout-container > .container {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0;
+  }
+  .layout-container > .container > .wrapper {
+    padding: 0;
+  }
+  div#block-radisys-content {
+    overflow: hidden;
+  }
+  // only for service page info panel
+    section.info-panel:last-of-type .info-panel_pane {
+      top: 0rem!important;
+  }
+  .info-panel {
+    margin-left: calc(-100vw / 2 + 975px / 2);
+    margin-right: calc(-100vw / 2 + 975px / 2);
+    left: 162.5px;
+    position: relative;
+    margin-bottom: 0rem;
+    .wrapper {
+      padding: 0;
+    }
+  }
+  .info-panel--bg {
+    padding: 4rem 0rem !important;
+  }
+  .info-panel .info-panel_pane {
+    top: 0;
+  }
+  .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 975px / 2);
+    margin-right: calc(-100vw / 2 + 975px / 2);
+    left: 162.5px;
+    position: relative;
+  }
+  // .col-lg-3.uberflip-vertical-col {
+  //   margin-bottom: 739px;
+  // }
+}
+
+.menu--services-mini-navigation--- {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334c9d+0,2b3f83+100 */
+  background: rgb(51, 76, 157); /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(43, 63, 131, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(43, 63, 131, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(43, 63, 131, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334c9d', endColorstr='#2b3f83',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  padding: 1rem 0rem;
+
+  .menu-item--active-trail {
+    a {
+      position: relative;
+      &:after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background: $red;
+        bottom: -7px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  .menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu {
+      position: absolute;
+      z-index: 99;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+      transform: scaleY(0.9);
+      transform-origin: top;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334c9d+0,2b3f83+100 */
+      background: $blue;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 3px 11px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      li a {
+        padding: 0.8rem;
+        display: block;
+        transition: all 0.3s ease-out;
+        &:hover {
+          background: $blue-dark;
+        }
+      }
+      .menu-item {
+        width: 100%;
+      }
+    }
+
+    .menu-item--expanded {
+      list-style: none !important;
+      &:hover {
+        .menu {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+      .menu-item--divider {
+        display: none;
+      }
+    }
+
+    .menu-item--divider {
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu-item--divider {
+  height: 1.5rem;
+  width: 1px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.services-hero {
+  height: 32rem;
+  background-size: cover;
+  background-position: center;
+  .container {
+    z-index: 5;
+  }
+}
+
+.services-hero--h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 2.6rem;
+  span {
+    color: $red;
+    font-weight: 600;
+  }
+}
+
+.services-hero--h2 {
+  font-weight: 300;
+  font-size: 1.3rem;
+  width: 50%;
+  line-height: 1.8rem;
+}
+
+.services-hero_filter {
+  background: black;
+  opacity: 0.3;
+  left: 0;
+  top: 0;
+}
+
+// Overview
+.overview--img {
+    // large screen . add space
+    @include media-breakpoint-up(lg) {
+      padding: 2rem  4rem 2rem 0;
+    }
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    // box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.14);
+  }
+}
+
+.overview--img > .video-embed-field-responsive-video {
+  margin: auto;
+  width: 100%;
+}
+
+.service-overview {
+  position: relative;
+}
+
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 110vw;
+  position: absolute;
+  right: 50%;
+  width: 110vw;
+  height: 100%;
+  z-index: -1;
+}
+
+.key-benefits--wrapper {
+  h3 {
+    white-space: nowrap;
+    width: 177px;
+    font-size: 1.85rem;
+  }
+}
+
+.key-benefit--img {
+  img {
+    height: 3rem;
+    width: auto;
+  }
+}
+
+.key-benefits--bg {
+  background-image: url("../img/bg/key-benefits-bg.jpg");
+  background-size: cover;
+  background-position-y: center;
+}
+
+// Datasheets
+.datasheet {
+  background: url("../img/bg/datasheet-bg.jpg");
+  background-size: cover;
+  padding: 3rem 4rem;
+  border-radius: 10px;
+}
+
+.datasheet_h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  span {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.datasheet_sub_title {
+  font-size: 1rem;
+}
+
+.double-datasheets {
+  &:nth-of-type(1) {
+    padding-right: 0;
+    .info-panel_pattern {
+      display: none;
+    }
+  }
+  &:nth-of-type(2) {
+    padding-left: 0;
+    position: relative;
+    top: -3rem;
+    right: 1rem;
+    .datasheet {
+      background: #334c9d;
+      background: linear-gradient(45deg, #334c9d 0, #6c39e5 100%);
+    }
+  }
+}
+
+.datasheet-downloads {
+  // margin-top: 4rem;
+}
+
+.datasheet-downloads > .wrapper > .row {
+  margin-right: -1rem;
+}
+
+.datasheet-dload-btn {
+  font-size: 1rem;
+}
+
+.icon-chevron-circle-righttrendy:before {
+  content: "\f138";
+}
+
+@media only screen and (max-width: 991px) {
+  .double-datasheets {
+    &:nth-of-type(1) {
+      padding-right: 15px;
+    }
+    &:nth-of-type(2) {
+      padding-left: 15px;
+      top: 0rem;
+      right: 0rem;
+    }
+  }
+}
+
+// Solutions
+.solution-block--wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.solutuon-block--filter {
+  top: 0;
+  left: 0;
+}
+
+.filter-dark {
+  background: black;
+  opacity: 0.3;
+  transition: all 0.3s ease-out;
+}
+
+.filter-orange,
+.filter-purple,
+.filter-pink {
+  transition: all 0.3s ease-out;
+  position: relative;
+  &:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-image: url(../img/bg/dot-pattern-panel.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.solution-block {
+  transition: all 0.3s ease;
+  padding: 5rem 3rem;
+  position: relative;
+  border: none !important;
+  outline: none !important;
+  text-align: left;
+  background-size: cover;
+  background-position: center;
+  &:hover {
+    transform: scale(1.05);
+    z-index: 9;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.52);
+    .filter-dark {
+      opacity: 0.2;
+    }
+    .filter-orange,
+    .filter-purple {
+      opacity: 0.9;
+    }
+  }
+}
+
+.label-holder {
+  opacity: 0;
+}
+
+.solution-block-1-2,
+.solution-block-1-3 {
+  text-align: center;
+}
+
+.filter-orange {
+  background: #dd1c4c;
+  background: linear-gradient(45deg, #dd1c4c 0, #dd691c 100%);
+  opacity: 0.8;
+}
+
+.filter-purple {
+  background: #334c9d;
+  background: linear-gradient(45deg, #334c9d 0, #6c39e5 100%);
+  opacity: 0.8;
+}
+
+.filter-pink {
+  background: rgb(221, 28, 76);
+  opacity: 0.8;
+  background: linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(173, 28, 233, 1) 100%
+  );
+}
+
+.column-text-right,
+.column-text-left {
+  .solution-block--content {
+    width: 50%;
+  }
+}
+
+.column-text-right {
+  .solution-block--content {
+    width: 50%;
+  }
+  .solution-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.services-hero--logo {
+  max-width: 25rem;
+  margin-bottom: 1rem;
+}
+
+.contact-us {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .page-node-type-services-page .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 645px / 2);
+    margin-right: calc(-100vw / 2 + 815px / 2);
+  }
+
+  section.service-overview {
+    padding-top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .page-node-type-services-page .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 405px / 2);
+    margin-right: calc(-100vw / 2 + 1055px / 2);
+  }
+  .uberflip-verical_item img {
+    height: 16rem;
+  }
+  section.service-overview {
+    padding-top: 4rem;
+  }
+}
+
+.page-node-type-services-page {
+  .global-hero-banner--edit-tabs {
+    bottom: 357px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .key-benefits--wrapper.d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .services-hero--logo {
+    max-width: 18rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-node-type-services-page .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 230px / 2);
+    margin-right: calc(-100vw / 2 + 851px / 2);
+  }
+  section.service-overview {
+    padding-top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .double-datasheets {
+    padding-right: 35px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .services-hero--h2 {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .services-hero--logo {
+    display: block;
+    margin: 0 auto;
+  }
+  section.service-overview h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .page-node-type-services-page .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 174px / 2);
+    margin-right: calc(-100vw / 2 + 811px / 2);
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .page-node-type-services-page .page-showcase-section {
+    margin-left: calc(-100vw / 2 + 83px / 2);
+    margin-right: calc(-100vw / 2 + 736px / 2);
+  }
+  section.services-hero .wrapper {
+    padding: 5rem 0rem;
+  }
+}
+
+// small screen size
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .page-node-type-services-page {
+    .solution-block {
+      .solution-block--content {
+        width: 100%;
+      }
+    }
+    .datasheet {
+      padding: 2rem 2rem;
+      .datasheet_h4 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  .page-showcase-section {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | Overview column 2 
+//  |--------------------------------------------------------------------------
+// */
+.overview-image-wrapper {
+  img {
+    height: 100%;
+    width: 100%;
+    min-height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | adjustment : overwrite codes above, 2021
+//  |--------------------------------------------------------------------------
+// */
+
+      .page-node-type-services-page {
+        .page-header-panel img {
+          width: 100%;
+          max-width: 35rem;
+          -o-object-fit: contain;
+         object-fit: contain; 
+          height: auto;
+      }
+      .service-overview-single-first{
+        .overview-image-wrapper {
+          img {
+            height: 100%;
+            width: 100%;
+            min-height: 350px;
+            border-radius: 10px;
+            object-fit: contain;
+          }
+        }
+      }
+      }
+
+      // sidebar style 
+      .contact-us-side {
+        p, span {
+            font-size: 1rem !important;
+            line-height: 1.5;
+        }
+        
+          .contact-us-side-heading {
+            font-size: .9rem !important;
+        }
+      }
+
+      .lets-engage {
+          p, span {
+            font-size: 1rem !important;
+            line-height: 1.5;
+        }
+      }
+
+// info panel
+      .page-node-type-services-page {
+        @media only screen and (max-width: 990px) {
+          .info-panel {
+            width: 100% !important;
+            margin: 0;
+            left: 0;
+          }
+           // sidebar 
+          .uberflip-vertical-col {
+            display: none;
+          }
+        }
+      }
+      
+
+
+
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | adjustment : for making Sidebar dynamic
+//  |--------------------------------------------------------------------------
+// */
+      // services template main content
+      // !! to keep previous template setting, 
+      //need to have this hide from main content area.
+      //the side bar contents from fields
+      .services-page-main-area {
+        .sidebar-panel {
+          display: none !important;
+        }
+      }
+     
+      .sidebar-panel {
+        h4 {
+          font-size: 1.7rem;
+        }
+        .side-panel-editor{
+          p {
+            color: white;
+            font-size: 1rem !important;
+          }
+        }
+        .datasheet-dload-btn {
+          align-items: center;
+        }
+        .sidebar-img{
+          border-radius: 10px;
+          position: relative;
+          &:after {
+          border-radius: 10px;
+            content: '';
+            background-color: rgba(0,0,0,.3);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .pane-content {
+          z-index: 1;
+          position: relative;
+        }
+        h5 {
+          font-size: 1rem;
+        }
+        span {
+          font-size: .9rem;
+        }
+      }
+
+      
+
+      // //*
+//  |--------------------------------------------------------------------------
+//  | Modal : Mordal form for one service page
+//  |--------------------------------------------------------------------------
+// */
+.modal-download {
+  .modal-cta-btn {
+    background-color: $red;
+    padding: .5rem 2.5rem;
+    border-radius: 20px;
+    border: none;
+    margin-top: 1rem;
+    color: white;
+  }
+  button.close {
+    border: 0;
+    height: 50px;
+}
+}

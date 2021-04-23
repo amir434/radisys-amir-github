@@ -1,0 +1,65 @@
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+
+<div class="container w-100 overflow-hidden mb-5">
+<section class="why-radisys w-100">
+  <div class="row w-100">
+
+    <div class="wrapper w-100">
+    <div class="d-flex why-radisys_wrapper w-100">
+
+
+        <div class="why-radisys_title mr-5 d-flex flex-grow-1 justify-content-center pl-3 flex-column">
+          <h2 class="text-nowrap text-darkgray why-radisys_font--left mb-3" data-aos="fade-right" data-aos-duration="500">Open <strong class="text-red"><br>Insights</strong> </h2>
+
+          <h2 class="text-nowrap text-darkgray why-radisys_font--left" data-aos="fade-right" data-aos-duration="500">Open <br>  <strong class="text-red">Innovation</strong></h2>
+        </div>
+
+        <div class="why-radisys_content flex-grow-1 w-100" >
+          <div class="row">
+
+            {% if label_hidden %}
+              {% if multiple %}
+
+                {% for item in items %}
+                  {{ item.content }}
+                {% endfor %}
+
+              {% else %}
+                {% for item in items %}
+                  {{ item.content }}
+                {% endfor %}
+              {% endif %}
+            {% else %}
+              {% if multiple %}
+              {% endif %}
+              {% for item in items %}
+                {{ item.content }}
+              {% endfor %}
+              {% if multiple %}
+              {% endif %}
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+
+  </div>
+</section>
+</div>
+

@@ -1,0 +1,26 @@
+{# Radisys Five Pillers #}
+{%
+  set classes = [
+    'radisys-five-pillers-section',
+    'section-space',
+    'container',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+
+ <div{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div class="col-12 col-lg-6 five-piller-title-wrapper">
+            {{ content.field_section_title_open_radisys}}
+        </div>
+        <div class="col-12 col-lg-6">
+            {{ content.field_five_pillars_content_right}}
+        </div>
+    </div>
+</div>

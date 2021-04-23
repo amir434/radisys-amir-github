@@ -1,0 +1,42 @@
+{# About page: Timeline section first row #}
+{# get the title of the section #}
+{% if content.field_section_header_title %}
+    {% set  heading = paragraph.field_section_header_title.value %}
+{% endif %}
+
+{# get the value of main content#}
+{% if content.field_section_body_text %}
+    {% set contents = content.field_section_body_text %}
+{% endif %}
+
+{# get the image url value #}
+{% if content.field_partner_solution_bg_image %}
+  {% set bg_img = content.field_partner_solution_bg_image.0['#markup'] %}
+{% endif %}
+
+{%
+  set classes = [
+    'section-timeline-first',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+   <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+     	<div class="partner-solution-bg bg-for-right overflow-hidden" style="background-image: url('{{ bg_img }}');">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 empty-space"></div>
+                    <div class="col-lg-6 mb-5 mt-2 mt-lg-5" data-aos="fade-left" data-aos-duration="600">
+                          <h2 class="text-white">{{ heading }}</h2>
+                          <div class="timeline-content mt-3">{{ contents }}</div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      {% endblock %}
+    </div>
+  

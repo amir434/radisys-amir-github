@@ -1,0 +1,37 @@
+{# ready to learn more section #}
+{% if page.ready_to_learn|render|striptags %}
+	<section class="ready-to-learn_section--wrapper">
+		<div class="container pt-5 pb-5">
+			<div class="ready-to-learn_section">
+				{{ page.ready_to_learn }}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{# end ready to learn more section #}
+<footer class="bg_gray pt-4 pb-4">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				{{ page.footer_first }}
+			</div>
+
+			<div class="col-lg-7">
+				{{ page.footer_second }}
+			</div>
+
+			<div class="col-lg-2">
+				{{ page.footer_third }}
+			</div>
+
+		</div>
+
+		<hr>
+
+		<p class="text-white text-center mb-0 footer-bottom-row">&copy;
+			{{ "now"|date("Y") }}
+			Radisys | <a class="text-white" href="/privacy-policy">Privacy Policy</a> | <a class="text-white" href="/terms-use">Terms of Service</a></p>
+	</div>
+
+</footer>

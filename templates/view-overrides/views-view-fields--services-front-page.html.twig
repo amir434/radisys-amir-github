@@ -1,0 +1,29 @@
+<div class="service-block h-100 d-flex justify-content-center flex-column bg-dark position-relative">
+
+  <div class="service-block--filter h-100 w-100 position-absolute"></div>
+  <div class="service-block--filter_gradient h-100 w-100 position-absolute"></div>
+
+  <div class="p-3 pt-4 pb-4 position-relative service-block--content d-flex flex-column h-100">
+
+    <div class="d-flex align-items-baseline service-block--title justify-content-center">
+      <img class="service-block--icon mr-2" src="{% spaceless %}{{ fields.field_icon.content|striptags }}{% endspaceless %}" alt="">
+      <h3 class="service-block--h3 mb-0 text-white view-id-services_front_page d-flex flex-wrap"> {{ fields.field_title.content }}</h3>
+    </div>
+
+    <p class="text-center text-white mt-2 mb-3">{% spaceless %}{{ fields.field_body.content|striptags }}{% endspaceless %}</p>
+
+    {{ fields.field_service_highlight.content }}
+
+    <div class="d-flex justify-content-center mt-auto pt-3">
+    {{ fields.field_learn_more_button_link.content }}
+    </div>
+  </div>
+
+  <picture class="service-block--picture">
+    <source data-srcset="{% spaceless %}{{ fields.field_background_image_webp.content|striptags }}{% endspaceless %}" type="image/webp">
+    <source data-srcset="{% spaceless %}{{ fields.field_back.content|striptags }}{% endspaceless %}" type="image/jpeg">
+    <img class="service-block--img w-100 lazy" data-src="{% spaceless %}{{ fields.field_back.content|striptags }}{% endspaceless %}">
+  </picture>
+
+
+</div>

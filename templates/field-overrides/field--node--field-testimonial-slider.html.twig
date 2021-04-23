@@ -1,0 +1,37 @@
+{# tthis is for Testimonials slider #}
+{%
+  set classes = [
+    'testimoninals-slide',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+{% if items is not empty %}
+<section data-aos="fade-up" class="section-space testimonial-section-container position-relative container overflow-hidden">
+	<img src="{{ base_path ~ directory }}/img/bg/red-bg.svg" alt="bg image" class="img-red-bg "/>
+	<div class="container testimonials-container bg-white shadow p-5 ">
+		<div class="arrows-wrap">
+			<img src="{{ base_path ~ directory }}/img/icons/left-arrow.svg" alt="arrow left" class="d-none img-arrow prev-comment"/>
+			<img src="{{ base_path ~ directory }}/img/icons/right-arrow.svg" alt="arrow arrow" class="d-none img-arrow next-comment"/>
+		</div>
+		<div class="testimoninals-slide ">
+			{% for item in items %}
+				{{ item.content }}
+			{% endfor %}
+		</div>
+
+		{# for slider nav #}
+		<ul id="carousel-nav"></ul>
+	</div>
+
+	<img src="{{ base_path ~ directory }}/img/bg/red-dot.svg" alt="bg image" class="img-dot-bg "/>
+
+</section>
+	{% else %}
+		{# don't print the shape and content #}
+{% endif %}

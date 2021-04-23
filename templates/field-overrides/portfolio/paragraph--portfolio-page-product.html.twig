@@ -1,0 +1,42 @@
+{# Portofolio page:product section original#}
+{%
+  set classes = [
+    'portfolio-production--wrapper',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# get the clean link #}
+{% set link = content.field_product_link_url.0['#title'] %} 
+
+
+<div {{ attributes.addClass(classes) }} >
+{# generate link when the product page only exsist #}
+ {% if link is not empty %}
+	<a href="{{ link }}" class="no-under-line">
+{% endif %}
+	<div class="portfolio-production position-relative overflow-hidden shadow-md bg-gradient--{% spaceless %}{{content.field_color|render|remove_html_comments}}{% endspaceless %}">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="info-panel_pattern position-absolute w-100 h-100"></div>
+				<div class="portfolio-production--content_wrapper h-100 d-flex align-items-center">
+					<div class="portfolio-production--content">
+						<p class="text-white">{{ content.field_product_description }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 p-0">
+				<div class="portfolio-production--bg h-100 w-100 d-flex align-items-center  justify-content-center" style="background-image: url('{% spaceless %}{{content.field_product_image|render|remove_html_comments}}{% endspaceless %}')">
+						<img src="{% spaceless %}{{content.field_product_logo|render|remove_html_comments}}{% endspaceless %}" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+{# generate close link if product page exsist #}
+{% if link is not empty %}
+	</a>
+{% endif %}
+</div>

@@ -1,0 +1,606 @@
+.solution-item_portfolio {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  min-height: 20rem;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.1;
+  }
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 9px 3px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.uberflip-solutions-link {
+  display: none;
+}
+
+section.service-section section.service-section > div {
+  background: none !important;
+}
+
+.node__content.portfolio__page {
+  position: relative;
+}
+
+section.service-section section.service-section {
+  width: 100%;
+}
+
+img.portfolio-page--services_pane_logo {
+  max-width: 75%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.node__content.portfolio__page > p {
+  display: none;
+}
+
+.info-panel_pane h4 {
+  margin-bottom: 1rem;
+  font-size: 2.1rem;
+}
+.service-section--bg {
+  background-image: url("../img/bg/services-bg.jpg");
+  color: #fff;
+  min-height: 24rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,222020+100&0+0,1+100 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(34, 32, 32, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(34, 32, 32, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(34, 32, 32, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#222020',GradientType=0 ); /* IE6-9 */
+  }
+  p {
+    color: white;
+  }
+}
+
+section.product-heading--text {
+  background: white;
+  padding: 2rem 0rem;
+  p {
+    margin: 0;
+  }
+}
+
+.product-section-display {
+  padding-top: 4rem;
+  background: white;
+}
+
+.info-panel_pane_bottom {
+  top: 0px;
+}
+
+section.product-display-section {
+  background: white;
+}
+
+.product--service_block--url {
+  text-decoration: none !important;
+}
+
+.product--service_block {
+  background: linear-gradient(45deg, #334c9d 0, #a339e5 100%);
+  padding: 2rem;
+  border-radius: 7px;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  h2,
+  p,
+  a span {
+    color: white !important;
+  }
+  h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(221, 28, 76);
+    background: -moz-linear-gradient(
+      left,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd1c4c', endColorstr='#f24772',GradientType=1 );
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "";
+    /* pointer-events: none; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    opacity: 0.1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url(/themes/radisys/img/bg/dot-pattern-panel.png);
+  }
+}
+
+.flex-title--reposition {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+img.product-service-block_logo {
+  max-width: 17rem;
+  order: -1;
+  margin-bottom: 1rem;
+}
+
+.portfolio-solutions {
+  background-image: url(/themes/radisys/img/bg/key-benefits-bg.jpg);
+  background-size: cover;
+}
+
+.portfolio-page--services_pane {
+  img {
+    width: 100%;
+  }
+  p {
+    color: white;
+    margin-top: 0.5rem;
+  }
+}
+
+.portfolio-production {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  min-height: 325px;
+  transition: all 0.4s ease-in-out;
+  .row {
+    min-height: inherit;
+  }
+  img {
+    transition: all 0.4s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0px 7px 14px 3px rgba(0, 0, 0, 0.24);
+    .portfolio-production--bg {
+      clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    img {
+      transform: translateX(20px);
+    }
+  }
+}
+
+a.portfolio-production--wrapper {
+  text-decoration: none;
+}
+
+.even-product .row {
+  display: flex;
+  flex-direction: row-reverse;
+  .portfolio-production--bg {
+    clip-path: polygon(0 0, 71% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.even-product {
+  .portfolio-production--content {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .portfolio-production {
+    &:hover {
+      .portfolio-production--bg {
+        clip-path: polygon(0 0, 61% 0, 100% 100%, 0 100%);
+      }
+      .portfolio-production--content img {
+        transform: translateX(-20px);
+      }
+    }
+  }
+}
+
+.portfolio-production--content {
+  padding: 2rem 2rem 2rem 4rem;
+  img {
+    max-width: 22rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.portfolio-production--bg {
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(22% 0, 100% 0%, 100% 100%, 0% 100%);
+  transition: all 0.4s ease-out;
+}
+
+.portfolio-production.bg-gradient--Orange {
+  background: rgb(221, 28, 76);
+  background: linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 15%,
+    rgba(221, 105, 28, 1) 100%
+  );
+}
+
+.portfolio-production.bg-gradient--Purple {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334c9d+0,6c39e5+100 */
+  background: rgb(98, 113, 161); /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(108, 57, 229, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(108, 57, 229, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    rgba(51, 76, 157, 1) 0%,
+    rgba(108, 57, 229, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334c9d', endColorstr='#6c39e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.portfolio-production.bg-gradient--Pink {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dd1c4c+0,ad1ce9+100 */
+  background: rgb(221, 28, 76); /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(173, 28, 233, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(173, 28, 233, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(173, 28, 233, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd1c4c', endColorstr='#ad1ce9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@media only screen and (max-width: 892px) {
+  .portfolio-production--bg {
+    clip-path: inherit !important;
+    height: 220px !important;
+  }
+  .portfolio-production--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .service-section--bg.wrapper {
+    .pane-position-right {
+      top: 0;
+      margin-top: 2rem;
+    }
+  }
+  .service-section--bg.wrapper h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+// Portofolio page- for Evolve
+.portfolio-product-extended--wrapper {
+  .portofolio-content-long {
+    p {
+      color: #ffffff;
+    }
+  }
+  .portfolio-production--bg {
+    img {
+      width: 50%;
+    }
+  }
+}
+.no-under-line {
+  &:hover {
+    text-decoration: none;
+  }
+}
+// adjust the size of the product logo
+.portfolio-production img {
+  width: 55%;
+}
+.even-product .portfolio-production img {
+margin-right: 3.5rem;
+}
+
+// ============================================
+// Add modal in the portofolio page
+//===============================================
+.optional-contact-section {
+  .close {
+      border: none;
+  }
+  .modal-header {
+    border-bottom: 0px;
+}
+  padding: 3rem 0;
+  background: rgb(221, 28, 76);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(225, 33, 206, 1) 100%
+  );
+  .modal-cta-btn {
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: white;
+      a {
+        color: rgb(221, 28, 76);
+      }
+    }
+  }
+  .modal-cta-btn > a {
+    font-size: 1.1rem;
+    padding: 5px 25px;
+    text-decoration: none;
+    &::after {
+      font-family: "fa-trendy";
+      font-weight: 400;
+      content: "\f178";
+      padding-left: 0.5rem;
+    }
+  }
+  h2,
+  p,
+  a {
+    color: white;
+  }
+  .btn-secondary {
+    color: #fff;
+    background-color: #bdbdbd;
+    border-color: #bdbdbd;
+}
+form {
+  width: 100% !important;
+}
+}
+.mkto-form-white {
+  .mktoFieldWrap {
+    width: 100%;
+}
+label#LblNewsletter_Opt_Out__c {
+  width: 100% !important;
+  font-weight: 600;
+}
+label#LblHelp_Question__c {
+  font-weight: 600;
+}
+textarea#Help_Question__c {
+    width: 100% !important;
+    margin-top: .3rem !important;
+    height: 200px !important;
+    margin-bottom: 1rem !important;
+}
+.mktoForm input[type=text],.mktoForm input[type=email], .mktoForm input[type=tel] ,.mktoForm select.mktoField{
+    height: 3.18em !important;
+    margin-bottom: 8px;
+    width: 100% !important;
+    padding: 5px 10px;
+}
+.mktoFieldDescriptor {
+    display: flex;
+    label#LblNetworkEvolution {
+        width: 100% !important;
+    }
+    label#LbliPMediaIntelligence {
+        width: 100% !important;
+        padding-left: 8px !important;
+    }
+    label#LblembeddedSolutionsDataCenterPlatforms {
+        width: 100% !important;
+    }
+    .mktoFieldWrap {
+        display: flex;
+        float: left !important;
+    }
+}
+
+select#Country {
+    color: #737373;
+}
+
+.mktoButtonRow {
+    width: 100% !important;
+    display: flex !important;
+    margin-top: 1rem !important;
+  
+    }
+    .mktoButtonWrap.mktoNative {
+        width: 100% !important;
+        margin: .8rem 0 !important;
+    }
+  
+button.mktoButton {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        // change the default color
+        padding: 8px 30px !important;
+        background: linear-gradient(51deg,#334c9d 0,#912bc4 57%,#dd1c4c 100%) border-box !important;
+        background-size: 150% 100% !important;
+        background-repeat: no-repeat !important;
+        color: #fff;
+        border-radius: 25px !important;
+        -webkit-transition: all .5s ease !important;
+        transition: all .5s ease !important;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all .5s ease !important;
+        text-transform: uppercase !important;
+        border: 0px solid !important;
+        &:hover {
+            background: linear-gradient(51deg,#334c9d 0,#912bc4 57%,#dd1c4c 100%) border-box !important;
+            background-position: 90% 0 !important;
+            moz-transition: all .4s ease-in-out !important;
+            -o-transition: all .4s ease-in-out !important;
+            -webkit-transition: all .4s ease-in-out !important;
+            transition: all .4s ease-in-out!important;
+            border: 0px solid !important;
+            color: white!important;
+        }
+}
+.mktoButtonWrap {
+  width: 100% !important;
+  margin: auto !important;
+}
+.mktoFieldDescriptor.mktoFormCol {
+  width: 100%;
+}
+.mktoFieldDescriptor>.mktoFieldWrap>label {
+  font-weight: 600 !important;
+}
+// smaller device
+@media only screen and (max-width: 480px){
+ label#LblNewsletter_Opt_Out__c{
+  font-weight: 600 !important;
+  max-width: 50% !important;
+ }
+ .mktoFieldWrap {
+      float: none;
+      width: 100% !important;
+  }
+   .mktoLabel {
+      max-width: 30% !important;
+  }
+  .mktoForm input[type=text],.mktoForm input[type=email], .mktoForm input[type=tel] ,.mktoForm select.mktoField{
+    height: 3em !important;
+}
+}
+}
+
+
+
+// ============================================
+// Add editor and image field  in first section
+//===============================================
+.product-introduction-body {
+  padding: 1.3rem 0;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  // sub heading overwrite in this template
+  h3 {
+    margin-bottom: -2rem;
+    font-size: 2rem;
+ }
+}
+.product-introduction-body:first-of-type {
+  margin-top: -2rem;
+}
+// list items style
+.body-list-items{
+  li {
+    font-size: 1.15rem;
+    margin-bottom: .35rem;
+  font-weight: 700;
+  &:before {
+    font-family: "fa-trendy" !important;
+    font-weight: 400;
+    content: "\f0da";
+    padding-right: 0.4rem;
+    color: $red;
+  }
+  }
+}
+
+
+
+
+// ============================================
+// Styles for optional cta section 
+//===============================================
+
+.optional-cta-cob{
+  .optional-cta-cob-img {
+    max-height: 350px;
+    object-fit: cover;
+  }
+}

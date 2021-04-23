@@ -1,0 +1,19 @@
+{# tthis is for the about page foirst section #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+<section class="about-page--about section-space section-space--banner container">
+<div class="row align-items-center"> 
+<div class="col-12">
+  {% for item in items %}
+      {{ item.content }}
+  {% endfor %}
+

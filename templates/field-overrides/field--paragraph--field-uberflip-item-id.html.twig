@@ -1,0 +1,34 @@
+{% set uberFlipID %}
+{% for item in items %}
+	{{- item.content -}}
+{% endfor %}
+{% endset %}
+{% set value = get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID) %}
+<div class="uberflip-item--display">
+	<div class="uberflip-item--display_inner">
+		<h4 class="font-weight-bold">
+			{{get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['title']}}
+		</h4>
+
+		<p>{{get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['description']}}</p>
+
+		<a class="read-article--btn text-white text-uppercase font-weight-bold" href="{{get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['url']}}">
+			{# <span class="icon-rsstrendy mr-1"></span>
+			Read Article
+			<span class="ml-1 icon-arrow-righttrendy"></span> #}
+				{% if value['type'] == 'blogs' %}
+								{# <span class="icon-rsstrendy"></span> #}
+								Read Article
+								<span class="icon-long-arrow-righttrendy"></span>
+							{% elseif value['type'] == 'docs' %}
+								{# <span class="icon-book-opentrendy"></span> #}
+								Read More
+								<span class="icon-long-arrow-righttrendy"></span>
+							{% else %}
+								{# <span class="icon-youtubetrendy"></span> #}
+								Watch Video
+								<span class="icon-long-arrow-righttrendy"></span>
+							{% endif %}
+		</a>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+{# Support portal pages main content :2 column #}
+{%
+  set classes = [
+    'support-main-col',
+    'col-12',
+    'col-lg-6',
+    'my-4',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+{% set colId = content.field_column_id.0['#context'].value %} 
+{% set colType = paragraph.field_type_of_col_content.value  %} 
+ <div {{ attributes.addClass(classes)}} >
+    {% if colId is not empty %}
+        <div id="{{ colId }}" class="support-col-content h-100 {{ colType}} ">
+         {% else %}
+          <div  class="support-col-content h-100 {{ colType}}">
+     {% endif %}
+         {{ content.field_main_content_half_col}}
+      </div>
+</div>

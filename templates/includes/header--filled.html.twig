@@ -1,0 +1,28 @@
+<header class="header-scroll">
+	<div class="container">
+		<div
+			class="header--inner">
+			{# <div class="hamburger-menu bg_gradient_pink">
+																																		<div></div>
+																																		<div></div>
+																																		<div></div>
+																																	</div> #}
+			{{ page.header }}
+			<div class="search-wrapper">
+				<span id="search-btn" class="icon-searchtrendy"></span>
+			</div>
+		</div>
+	</div>
+	<div class="header--news w-100 p-2 bg_gradient_left_right_purple">
+		<div class="container overflow-hidden">
+			<div class="d-flex header--news_wrapper">
+				<span class="header--news_text text-uppercase text-white font-weight-bold d-flex align-items-center">
+					<span class="icon-newspapertrendy mr-1"></span>
+					Latest News:</span>
+				{{ drupal_entity('block', 'views_block__latest_news_block_1') }}
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="mega-menu-filter" id="mega-menu-filter"></div>

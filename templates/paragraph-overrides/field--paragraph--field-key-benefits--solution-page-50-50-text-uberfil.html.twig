@@ -1,0 +1,10 @@
+<div class="key-benefits-mini">
+	<div class="key-benefits-mini--inner">
+		<h4 class="text-red font-weight-bold text-align-center">Key Benefits</h4>
+		{% if multiple %}{% endif %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+		{% if multiple %}{% endif %}
+	</div>
+</div>

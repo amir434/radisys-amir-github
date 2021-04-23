@@ -1,0 +1,26 @@
+{# Solution page: KEY information #}
+{%
+  set classes = [
+    'key-information-panle',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+
+ <div{{ attributes.addClass(classes,'col-lg-6','my-4','px-4') }}>
+    <div class="key-information-panel-wrapper shadow round-corner bg-white ">
+         <div class="key-info-panel-title d-flex">
+           {{ content.field_icon }}
+             <h4>{{ content.	field_key_information_title }}</h4>
+         </div>
+        <div class="key-panel">
+              {{ content.field_key_information_content }}
+        </div>
+    </div>
+</div>
+

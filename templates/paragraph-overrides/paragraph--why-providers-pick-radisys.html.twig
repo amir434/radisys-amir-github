@@ -1,0 +1,39 @@
+{#Set vars#}
+
+{% set conBgImage %}
+{% spaceless %}
+	{{ content.field_background_image }}
+{% endspaceless %}
+{% endset %}
+
+{% set conIcon %}
+{% spaceless %}
+	{{ content.field_icon }}
+{% endspaceless %}
+{% endset %}
+
+{#End Set vars#}
+<div class="bg_gray_light"></div>
+
+
+<div data-aos="fade-up" data-aos-duration="600" class="why-providers--panel mb-4  {% if paragraph.field_width.value == '50% (1/2)' %} col-lg-6 panel-wide {% else %} col-lg-4 col-md-12 panel-thin {% endif %}">
+
+
+	<a class="provider--panel_link" href="{% spaceless %}{{content.field_link_url|render|striptags}}{% endspaceless %}">
+	<div class="white-providers--panel_bg h-100 text-white d-flex position-relative overflow-hidden" style="background-image: url('{% spaceless %}{{ conBgImage|striptags }}{% endspaceless %}')">
+		<div class="why-providers--panel_filter w-100 h-100 position-absolute"></div>
+
+		<div class="d-flex why-providers--panel_wrapper align-self-end p-4 w-100 position-relative">
+			<div class="why-providers--panel_content_bg bg_gradient_pink w-100 z-8 h-100 position-absolute"></div>
+			<div class="why-providers-panel_icon z-8 position-relative mr-2">
+				<img src="{{ conIcon|striptags }}" alt="">
+			</div>
+			<div class="flex-grow-1 z-8 position-relative">
+				<h4 class="text-uppercase why-providers--panel_h4 text-white">{{ content.field_title }}</h4>
+				<div class="why-providers--panel_content why-providers--panel_body mb-4">{{ content.field_body }}</div>
+			</div>
+		</div>
+
+	</div>
+	</a>
+</div>

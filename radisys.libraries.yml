@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    theme:
+      "https://use.typekit.net/mso1wch.css": { type: external, minified: true }
+      css/child-theme.min.css: {}
+
+global-js:
+  js:
+    js/child-theme.min.js: {}
+    "https://cdn.sitesearch360.com/v13/sitesearch360-v13.min.js":
+      { type: external, minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal.dialog.ajax

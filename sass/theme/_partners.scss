@@ -1,0 +1,619 @@
+.partner-page,
+.partner-single-page,
+.partners-list-page {
+  .node__submitted {
+    display: none;
+  }
+}
+
+p {
+  font-size: 1.12rem !important;
+  line-height: 1.6;
+}
+/* **********************************
+
+styles for partners: solutions 
+
+****************************************/
+.btn-outline-white {
+  padding: 8px 30px;
+  background: linear-gradient(#211f1f, #211f1f) padding-box left,
+    linear-gradient(
+        51deg,
+        rgba(51, 76, 157, 1) 0%,
+        rgba(145, 43, 196, 1) 57%,
+        rgba(221, 28, 76, 1) 100%
+      )
+      border-box;
+  background-size: 100% 100%, auto;
+  background-repeat: no-repeat;
+  border: 3px solid transparent;
+  color: #fff;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+  // display: block;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  &:hover {
+    background-size: 0 100%, auto;
+    color: #fff;
+    text-decoration: none;
+  }
+  @media (min-width: 992px) {
+    max-width: 60%;
+  }
+}
+
+.partner-solutions-list {
+  background-color: #222020;
+  p {
+    color: white;
+  }
+}
+
+/* **********************************
+
+For the panel layout contents on right
+
+****************************************/
+
+.col-lg-6.empty-space {
+  min-height: 180px;
+}
+.partner-solution-bg.bg-for-right {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-width: 992px) {
+    background-size: cover;
+    background-position: center;
+  }
+}
+/* **********************************
+
+For the panel layout contents on LEFT
+
+****************************************/
+.partner-solution-bg.bg-for-left {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  .row {
+    flex-direction: column-reverse;
+  }
+  @media (min-width: 992px) {
+    background-size: cover;
+    background-position: center;
+    .row {
+      flex-direction: row;
+    }
+  }
+}
+
+/* **********************************
+
+For the index section
+
+****************************************/
+.field--name-field-content-index-title {
+  word-break: break-word;
+}
+.field--name-field-content-index-right {
+  background-color: $grey-bg;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  .paragraph--type--content-index-right {
+    margin-top: 1.9rem;
+  }
+}
+h3.index-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.cta-arrow {
+  &:hover {
+    color: $red;
+  }
+  &::after {
+    font-family: "fa-trendy";
+    font-weight: 400;
+    content: "\f178";
+    padding-left: 0.5rem;
+  }
+}
+
+.page-anchor {
+  display: block;
+  margin-top: -200px;
+  padding-top: 200px;
+}
+
+/* **********************************
+
+For the panel head
+
+****************************************/
+.header-panel-body {
+  p {
+    color: #fff;
+  }
+}
+.field--name-field-page-main-title {
+  // h1 for the page title on the shape
+  font-size: 2.5rem;
+}
+.page-header-panel {
+  padding: 3.2rem 3rem 4rem 3rem !important;
+  top: 3rem;
+
+  h1 {
+    // h1 for the page title on the shape
+    font-size: 2.3rem;
+    word-break: break-word;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  p {
+    color: #fff;
+    font-size: 1.14rem !important;
+    line-height: 1.8rem;
+    span {
+      color: white;
+    }
+  }
+  img {
+    // logo above the h1 
+    width: 100%;
+    max-width: 35rem;
+    object-fit: contain;
+    height: 140px;
+    //height: auto;
+    margin-bottom: 10px;
+    object-position: left;
+  }
+  @include media-breakpoint-up(xl) {
+    top: 7.5rem;
+  }
+  // small screen size
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575.98px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem !important;
+      line-height: 1.5;
+    }
+  }
+}
+
+.header-banner {
+  height: 450px;
+  width: 100%;
+  background-size: cover;
+  // background-position: center;
+  background-position: center;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.z-99 {
+  z-index: 90;
+}
+
+/* **********************************
+
+For the UF stream section
+
+****************************************/
+.section-space-bg {
+  padding: 4rem 0;
+}
+.page-showcase-section {
+  background-image: url("../img/bg/ng-showcase.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 0;
+}
+
+/* **********************************
+
+styles for partner single page 
+
+****************************************/
+.partner-solution-logo {
+  margin-bottom: 1.5rem !important;
+  width: 250px!important;
+  height: 100px!important;
+  object-fit: contain!important;
+  // adjustment for small device
+  @include media-breakpoint-down(xs) { 
+    width: 200px!important;
+  }
+}
+
+.page-header-panel--partner-single {
+  h1 {
+    word-break: break-word;
+  }
+  h4.text-white {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+}
+.partner-single-logo {
+  padding: 0rem 2rem;
+  max-width: 100%;
+}
+.partner-single-page {
+  .single-partner-summary {
+    background-color: $grey-bg;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .paragraph--type--section-header {
+    margin-top: 0 !important;
+  }
+  .section-space--banner {
+    margin-top: 8rem;
+}
+}
+
+/* **********************************
+
+styles for featured logos : views
+
+****************************************/
+.logo-col {
+  h2 {
+    display: none !important;
+  }
+}
+
+.logos-row {
+  background: white;
+  align-items: center;
+  // Three columns to start
+  @include row-cols(2);
+
+  // 3 columns from medium breakpoint up
+  @include media-breakpoint-up(md) {
+    @include row-cols(3);
+  }
+  // Five columns from medium breakpoint up
+  @include media-breakpoint-up(lg) {
+    @include row-cols(5);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    transition: 0.5s ease-in;
+    &:hover {
+      transition: 0.2s ease-in;
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    }
+  }
+}
+
+/* **********************************
+
+styles for partner listed page
+
+****************************************/
+.partners-list-page {
+  .main-content {
+    img {
+      width: 100%;
+      padding: 2rem 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    li {
+      padding-bottom: 5px;
+      font-weight: 600;
+      &:before {
+        font-family: "fa-trendy" !important;
+        font-weight: 400;
+        content: "\f0da";
+        padding-right: 0.5rem;
+        color: $red;
+      }
+    }
+  }
+}
+
+.search-result-row {
+  justify-content: center;
+  // Three columns to start
+  @include row-cols(1);
+
+  // Five columns from medium breakpoint up
+  @include media-breakpoint-up(lg) {
+    @include row-cols(3);
+  }
+}
+// each companies tile
+.result-col {
+  display: flex;
+  flex-flow: column;
+  border-radius: 8px;
+  img {
+    display: flex;
+    margin: auto;
+    max-width: 100%;
+    height: 200px;
+    padding: 1rem;
+    object-fit: contain;
+  }
+  span.about {
+    display: none;
+  }
+  .partner-logo-teaser {
+    display: flex;
+    height: 100%;
+    border-radius: 8px;
+    flex-flow: column;
+    margin: 1rem 0;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  .mt-5 {
+    margin-top: 1.5rem !important;
+  }
+  h3 {
+    color: #334c9d;
+    font-weight: 600;
+    word-break: break-word;
+    margin-bottom: 0.8rem;
+  }
+  .node-readmore {
+    padding: 0;
+  }
+  a:not(.link-wrap) {
+    color: #334c9d;
+    font-weight: 600;
+    &::after {
+      font-family: "fa-trendy";
+      font-weight: 400;
+      content: "\f178";
+      padding-left: 0.5rem;
+    }
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.partners-listing-section {
+  background: $grey-bg;
+}
+
+/* **********************************
+
+partner benefit sectioin
+
+****************************************/
+.partner-benefit-section {
+  padding: 3rem 0;
+  background: rgb(221, 28, 76);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 28, 76, 1) 0%,
+    rgba(225, 33, 206, 1) 100%
+  );
+  button {
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: white;
+      a {
+        color: rgb(221, 28, 76);
+      }
+    }
+  }
+  a {
+    padding: 8px 30px;
+    text-decoration: none;
+    &::after {
+      font-family: "fa-trendy";
+      font-weight: 400;
+      content: "\f178";
+      padding-left: 0.5rem;
+    }
+  }
+  h2,
+  p,
+  a {
+    color: white;
+  }
+}
+
+// UF for single paartner
+.uberflip-section--title {
+  margin: 2.5rem 0 1rem 0;
+  position: relative;
+  span {
+    background: #fff;
+    padding-right: 0.5rem;
+    color: #333;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 1px solid #333;
+    z-index: -1;
+  }
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.uberflip-table {
+  a.uberflip--a {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  h4 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+  a.uberflip--a,
+  span {
+    color: $red;
+    text-transform: uppercase;
+    font-size: 1.2 rem;
+    font-weight: 600;
+    margin-top: .5rem;;
+  }
+ 
+  a:hover {
+    text-decoration: none;
+  }
+  // change style upon request on dec 2020
+  .card {
+    // width: 65%;
+    margin: 0 .5rem;
+  }
+  .uf-cards-wrapper{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(lg) { 
+      flex-wrap: wrap;
+    }
+  }
+  .partner-card{
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 1rem;
+    min-width: 33.333%;
+    height: auto;
+    position: relative;
+    padding-top: 0 !important;
+    @include media-breakpoint-up(lg) { 
+      max-width: 45%;
+      margin: 1rem .5rem;
+    }
+  }
+  .card-uf-image {
+    min-height: 150px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 0;
+    max-height: 250px;
+}
+}
+
+.uberflip-horizontal_slider {
+  .uberflip-slide {
+    img {
+      // border-radius: 8px 8px 0 0 !important;
+      border-radius:0 !important;
+    }
+    .uberflip-slide_content {
+      border-radius:0 !important;
+      // border-radius: 0 0 8px 8px;
+    }
+  }
+}
+
+// Util
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Quote section
+.partner-quote-section {
+  margin-top: 4rem;
+  padding: 3.5rem 4rem;
+  background: #dd1c4c;
+  // background: -webkit-gradient(linear,left top,right top,from(#dd1c4c),to(#e121ce));
+  // background: linear-gradient(90deg,#dd1c4c 0,#e121ce 100%);
+  background: linear-gradient(51deg,#334c9d 0,#912bc4 57%,#dd1c4c 100%) border-box;
+    background-repeat: no-repeat;
+  // adjustment for small device
+    @include media-breakpoint-down(xs) { 
+      padding: 3.5rem 2rem;
+    }
+}
+.quote-container {
+  p,h4,h5 {
+    color: white;
+  }
+  p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.1rem !important;
+    line-height: 1.7;
+  }
+  h4{
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+.partner-logo-white {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}

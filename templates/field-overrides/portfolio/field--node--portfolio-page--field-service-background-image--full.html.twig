@@ -1,0 +1,8 @@
+{# portofolio : service section BG  #}
+{% set bg_img  = items.0.content['#markup'] %} 
+{% if bg_img is not empty %}
+	<section class="service-section">
+	<div class="service-section--bg py-5" style="background-image:url('{{ bg_img }}');">
+{% else %}
+		{# don't print the shape and content #}
+{% endif %}

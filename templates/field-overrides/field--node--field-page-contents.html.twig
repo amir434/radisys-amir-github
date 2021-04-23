@@ -1,0 +1,22 @@
+{# This is the field template for generic page template contents  #}
+{%
+  set classes = [
+    'page-contents',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+  ]
+%}
+
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items', 'container','section-space', 'section-space--banner', 'mb-5') }}>
+      {% for item in items %}
+         {{ item.content }}
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(classes, 'field__item','container') }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+

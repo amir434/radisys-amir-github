@@ -1,0 +1,68 @@
+{#Include Header#}
+{% include directory ~ '/templates/includes/header.html.twig' %}
+{#End Header#}
+
+
+{# {{ page.hero }} #}
+
+	<div class="layout-container"> <div class="wrapper pt-0">
+		{{ page.content }}
+	</div>
+</div>
+
+<section class="uberflip-horizontal">
+	<div class="wrapper">
+		<h3 class="d-block mb-5 w-100 text-center">Recommended For You</h3>
+
+
+		<div class="uberflip-horizontal_slider">
+
+			{% for value in get_uberflip_data('bbec2e61e2f220ba85c07fc46239d09406b1bb1e', '7061088') %}
+
+				<div class="block d-flex flex-column h-100 {{ value['type'] }}">
+					<div class="uberflip-slide pl-3 pr-3 d-flex flex-column h-100">
+						<img src="{{ value['thumbnail_url'] }}" alt="">
+						<div
+							class="uberflip-slide_content bg-white shadow-lg p-4 h-100 position-relative">
+							{# <h6 class="text-uppercase text-gray mb-0 mt-2">About
+															{{ time_elapsed_string(value['published_at'])  }}
+														</h6> #}
+							<a class="uberflip-slide--a" href="{{ value['url'] }}">
+								<h4 class="mt-1">
+									{{ value['title'] }}
+								</h4>
+							</a>
+
+							<a href="{{ value['url'] }}" class="read-article d-inline-block ml-auto mt-auto text-uppercase position-absolute">
+
+								{% if value['type'] == 'blogs' %}
+									<span class="icon-rsstrendy"></span>
+									Read Article
+									<span class="icon-long-arrow-righttrendy"></span>
+								{% elseif value['type'] == 'docs' %}
+									<span class="icon-book-opentrendy"></span>
+									Read Flipbook
+									<span class="icon-long-arrow-righttrendy"></span>
+								{% else %}
+									<span class="icon-youtubetrendy"></span>
+									Watch Video
+									<span class="icon-long-arrow-righttrendy"></span>
+								{% endif %}
+
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+
+		</div>
+
+	</div>
+</section>
+
+
+{#Include Footer#}
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+{#End Footer#}

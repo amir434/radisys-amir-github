@@ -1,0 +1,47 @@
+{# <section class="service-section">
+<div class="service-section--bg wrapper"> #}
+{% if items is not empty %}
+<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+					{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+					{% if label_hidden %}
+						{% if multiple %}
+							{% for item in items %}
+								{{ item.content }}
+							{% endfor %}
+						{% else %}
+							{% for item in items %}
+								{{ item.content }}
+							{% endfor %}
+						{% endif %}
+					{% else %}
+						{#    {{ label }}#}
+						{% if multiple %}{% endif %}
+						{% for item in items %}
+							<div class="d-flex h-100 align-center justify-content-center">
+								<h2 class="text-white mb-0 d-flex flex-column justify-content-center">
+									{{ item.content }}
+								</h2>
+							</div>
+						{% endfor %}
+						{% if multiple %}{% endif %}
+					{% endif %}
+				</div>
+	{% else %}
+		{# don't print the shape and content #}
+{% endif %}

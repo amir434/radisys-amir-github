@@ -1,0 +1,40 @@
+<header class="header-regular">
+	<div class="container">
+		<div
+			class="header--inner">
+			{# <div class="hamburger-menu bg_gradient_pink">																															</div> #}
+			{{ page.header }}
+			<div class="search-wrapper">
+				<span id="search-btn" class="icon-searchtrendy"></span>
+			</div>
+		</div>
+	</div>
+	<div class="header--news w-100 p-2 bg_gradient_left_right_purple">
+		<div class="container overflow-hidden">
+			<div class="d-flex header--news_wrapper">
+				<span class="header--news_text text-uppercase text-white font-weight-bold d-flex align-items-center">
+					<span class="icon-newspapertrendy mr-1"></span>
+					Latest News:</span>
+				{{ drupal_entity('block', 'views_block__latest_news_block_1') }}
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-search" id="popup-search">
+		<div class="container">
+			<div class="popup-search--inner">
+				<section role="search" data-ss360="true">
+					<input type="search" id="searchBox">
+					<button id="searchButton"></button>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	{# Cookie Consent #}
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="38418c45-8ad8-49b0-b6c7-c34d0b900128" type="text/javascript" async></script>
+
+
+</header>
+
+<div class="mega-menu-filter" id="mega-menu-filter"></div>

@@ -1,0 +1,57 @@
+<div class="hero-slider--home_wrapper">
+	<div class="hero-slider--home">
+		{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+		{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+		{% if label_hidden %}
+			{% if multiple %}
+				{% for item in items %}
+					<div class="slide-item">
+						{{ item.content }}
+					</div>
+				{% endfor %}
+			{% else %}
+				{% for item in items %}
+					<div class="slide-item">
+						{{ item.content }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% else %}
+			{#    {{ label }}#}
+			{% if multiple %}{% endif %}
+			{% for item in items %}
+				<div class="slide-item">
+					{{ item.content }}
+				</div>
+			{% endfor %}
+			{% if multiple %}{% endif %}
+		{% endif %}
+		
+	</div>
+	{# Arrow #}
+	<div class="hero-slide-arrow--container ">
+		<button class="prev hero-slide-arrow--btn ">
+			<span class="icon-long-arrow-righttrendy"></span>
+		</button>
+		<button class="next hero-slide-arrow--btn">
+			<span class="icon-long-arrow-righttrendy"></span>
+		</button>
+	</div>
+
+		
+{# for slider nav #}
+		 <ul  id="home-carousel-nav"></ul> 
+</div>

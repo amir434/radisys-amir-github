@@ -1,0 +1,22 @@
+{# tthis is index page title for the partners page : index title #}
+{%
+  set classes = [
+    'partner-single-logo',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the contents #}
+<section class="partner-single-page section-space section-space--banner container">
+<div class="row "> 
+<div class="col-lg-6">
+{% if label_hidden %}
+      {% for item in items %}
+        <img{{ item.attributes.addClass(classes, 'field__item') }} src="{{ item.content }}" alt="Radisys partner logo"/>
+      {% endfor %}
+{% endif %}
+

@@ -1,0 +1,27 @@
+{# Radisys About: testimonials slider #}
+{%
+  set classes = [
+    'radisys-testimonial-slide',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+
+ <div{{ attributes.addClass(classes) }}>
+     {{ content.field_testimonial_content}}
+     <div class="testimonial-info-wrapper">
+          {{ content.field_testimonial_logo}}
+       <div class="testimonial-info">
+         <h5 class="font-bold">{{ content.field_testimonial_name}}</h5>
+         <h4> {{ content.field_testimonial_company_name}}</h4>
+      </div>
+    </div>
+</div>
+
+ 
+           

@@ -1,0 +1,21 @@
+{# Portofolio: product heading #}
+{# </div></div></div> #}
+{# keep: whatever to close tags above to prevent from breaking previous developer's settings #}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+{# <div class="product-section-display">
+<section class="product-heading--text">
+<div class="container section-space--banner"> #}
+
+
+	<div {{ attributes.addClass(classes, 'container', 'section-space--banner') }}>
+			{% for item in items %}
+				<h2 class="mb-4 text-black mt-3">{{ item.content }}</h2>
+			{% endfor %}
+	</div>

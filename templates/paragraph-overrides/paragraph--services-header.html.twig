@@ -1,0 +1,28 @@
+{% set servBgImage %}
+{{ content.field_hero_background_image }}
+{% endset %}
+
+{% set servLogo %}
+{{ content.field_hero_banner_logo }}
+{% endset %}
+
+<section class="services-hero position-relative" style="background-image: url('{% spaceless %}{{ servBgImage|striptags }}{% endspaceless %}')">
+	<div class="services-hero_filter position-absolute h-100 w-100"></div>
+	<div class="container position-relative h-100">
+		<div class="wrapper h-100 d-flex align-items-center">
+			<div class="services-hero_wrapper">
+				<img class="services-hero--logo" src="{% spaceless %}{{ servLogo|striptags }}{% endspaceless %}" alt="">
+				<h1 class="services-hero--h1">{{ content.field_hero_banner_title }}</h1>
+				<h2 class="text-white services-hero--h2 mt-4">{{ content.field_hero_body_text }}</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="container edit-page-tabs">
+	{{ drupal_block('local_tasks_block') }}
+</div>
+
+<div class="container p-0">
+	<div class="row">
+		<div class="col-lg-9 p-0">

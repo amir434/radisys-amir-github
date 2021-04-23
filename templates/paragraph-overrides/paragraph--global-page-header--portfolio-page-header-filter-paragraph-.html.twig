@@ -1,0 +1,20 @@
+{# get the value of shape color #}
+{% if content.field_page_header_shape_color %}
+	{% set color = paragraph.field_page_header_shape_color.value %}
+{% endif %}
+
+{# get the value of shape color #}
+{% if content.field_sub_logo %}
+	{% set logo = content.field_sub_logo|render|remove_html_comments %}
+{% endif %}
+
+{# get the image url value #}
+{% if content.field_header_main_bg_image %}
+	{% set bg_img = content.field_header_main_bg_image.0['#markup'] %}
+{% endif %}
+
+<div class="portfolio-page--services_pane">
+	<img class="portfolio-page--services_pane_logo" src="{% spaceless %}{{logo}}{% endspaceless %}" alt="">
+	{{paragraph.field_page_header_summary.value|render|remove_html_comments }}
+
+</div>

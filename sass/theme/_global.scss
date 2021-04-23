@@ -1,0 +1,703 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  color: #333333;
+  strong {
+    font-weight: 600;
+  }
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  span {
+    color: $red;
+    font-weight: 600;
+  }
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.text-gray {
+  color: #afafaf;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+// column padding
+.cp {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+.z-8 {
+  z-index: 8;
+}
+
+.btn- {
+  &link {
+    text-decoration: none !important;
+    span {
+      transition: all 0.3s ease-out;
+      position: relative;
+    }
+    &:hover {
+      span {
+        right: -3px;
+      }
+    }
+  }
+  &read-more {
+    display: inline-block;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    position: relative;
+    transition: all 0.4s ease-out;
+    span {
+      color: white;
+    }
+    .icon-long-arrow-righttrendy {
+      transition: all 0.4s ease-out;
+      margin-left: 2rem;
+    }
+    &:hover {
+      .icon-long-arrow-righttrendy {
+        margin-left: 2.5rem;
+      }
+      background: white;
+      span,
+      &:after {
+        background: -webkit-linear-gradient(left, #334c9d, #dd1c4c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &:active,
+    &:focus:hover {
+      transition: all 0.1s ease;
+      border: 1px solid #912bc4;
+      box-shadow: 0px 0px 0px 1px #dd1c4c;
+      .icon-long-arrow-righttrendy {
+        transition: all 0.1s ease-out;
+        margin-left: 2rem;
+      }
+    }
+  }
+  &read-more--small {
+    font-size: 0.85rem;
+    padding: 0.3rem 1.5rem;
+    .icon-long-arrow-righttrendy {
+      margin-left: 1rem;
+    }
+    &:hover {
+      .icon-long-arrow-righttrendy {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+.bg_ {
+  &gradient_pink {
+    background: rgb(221, 28, 76);
+    background: -moz-linear-gradient(
+      left,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(242, 71, 114, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd1c4c', endColorstr='#f24772',GradientType=1 );
+  }
+  &gradient_pink_top_down {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dd1c4c+0,912bc4+51,334c9d+100 */
+    background: rgb(221, 28, 76); /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(145, 43, 196, 1) 51%,
+      rgba(51, 76, 157, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(145, 43, 196, 1) 51%,
+      rgba(51, 76, 157, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(221, 28, 76, 1) 0%,
+      rgba(145, 43, 196, 1) 51%,
+      rgba(51, 76, 157, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd1c4c', endColorstr='#334c9d',GradientType=0 ); /* IE6-9 */
+  }
+  &gradient_left_right_purple {
+    background: rgb(51, 76, 157); /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      rgba(51, 76, 157, 1) 0%,
+      rgba(145, 43, 196, 1) 50%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(51, 76, 157, 1) 0%,
+      rgba(145, 43, 196, 1) 50%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(51, 76, 157, 1) 0%,
+      rgba(145, 43, 196, 1) 50%,
+      rgba(221, 28, 76, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334c9d', endColorstr='#dd1c4c',GradientType=1 ); /* IE6-9 */
+  }
+  &dark_left_right {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+70,000000+100&0.65+0,0+72,0+72,0+100 */
+    background: -moz-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.02) 70%,
+      rgba(0, 0, 0, 0) 72%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.02) 70%,
+      rgba(0, 0, 0, 0) 72%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.02) 70%,
+      rgba(0, 0, 0, 0) 72%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  }
+  &gray {
+    background-color: #333333;
+  }
+  &gray_light {
+    background-color: #707070;
+  }
+}
+
+.wrapper {
+  padding: 2rem 0rem;
+}
+
+.row .view-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //margin-right: -15px;
+  //margin-left: -15px;
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+.view-id-services_front_page {
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  //flex-direction: column;
+}
+
+.service-block--content {
+  p {
+    font-size: 1rem;
+  }
+}
+
+li {
+  &:before {
+    font-family: fa-trendy !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+}
+
+// Right sidebar
+.lets-engage {
+  margin: 1rem;
+  background: url("../img/bg/datasheet-bg.jpg");
+  border-radius: 10px;
+  h4 strong {
+    line-height: 2rem;
+  }
+}
+.contact-us {
+  margin: 1rem;
+}
+
+.btn-bigger {
+  span {
+    font-size: 1.2rem !important;
+  }
+}
+
+.sign-up-btn {
+  background: $red;
+  border-color: $red;
+  &:hover {
+    borer-color: transparent;
+  }
+}
+
+// Bootstrap overrides
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | Admin Tabs
+//  |--------------------------------------------------------------------------
+// */
+.container.edit-page-tabs > div > nav > ul > li:nth-of-type(2) {
+  background: #ed3e68;
+  &:hover,
+  &:active,
+  &:focus {
+    background: $darkgray;
+  }
+  a {
+    color: white;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $darkgray;
+    }
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | global setting
+//  |--------------------------------------------------------------------------
+// */
+html {
+  scroll-behavior: smooth;
+}
+
+// for the global page :section spacing
+.section-space {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+// this is for the space on banner
+.section-space--banner {
+  margin-top: 9rem;
+  // Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(sm){
+  margin-top: 9rem;
+}
+}
+// for the global page header banner
+.info-panel_pane--pink-orange {
+  background: rgb(221, 28, 76);
+  background: linear-gradient(
+    45deg,
+    rgba(221, 28, 76, 1) 15%,
+    rgba(221, 105, 28, 1) 100%
+  );
+}
+
+.font-weight-med {
+  font-weight: 500;
+}
+
+.page-header-panel {
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spacing-above {
+  padding-top: 2rem;
+}
+
+.latest-news_content p {
+  font-size: 0.9rem !important;
+}
+
+.global-hero-banner--edit-tabs {
+  position: absolute;
+  bottom: -90px;
+  width: 100%;
+  z-index: 999;
+  ul.tabs.primary li:nth-of-type(2) {
+    background: #de224d;
+    color: white !important;
+    a {
+      color: white;
+    }
+  }
+}
+
+.edit-tabs-white {
+  a {
+    color: white;
+    background: #383838;
+  }
+  a:nth-of-type(2) {
+    background: #ed3e68;
+  }
+}
+
+.page-login {
+  input#edit-submit {
+    background: #de204d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  div#block-radisys-content {
+    display: flex;
+    justify-content: center;
+  }
+  div#edit-actions {
+    display: flex;
+    justify-content: center;
+  }
+  .js-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label.js-form-required.form-required {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.container--padding {
+  padding: 0rem 15px;
+}
+
+// Row columns
+//
+// Specify on a parent element(e.g., .row) to force immediate children into NN
+// numberof columns. Supports wrapping to new lines, but does not do a Masonry
+// style grid.
+@mixin row-cols($count) {
+  & > * {
+    flex: 0 0 100% / $count;
+    max-width: 100% / $count;
+  }
+}
+
+.logos-row {
+  background: pink;
+  // Three columns to start
+  @include row-cols(3);
+
+  // Five columns from medium breakpoint up
+  @include media-breakpoint-up(md) {
+    @include row-cols(5);
+  }
+}
+
+.btn-read-more span a {
+  color: white;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// For logged in users
+.user-logged-in {
+  .col-lg-3.uberflip-vertical-col {
+    margin-top: -37px;
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | Page hero area:  option 2
+//  |--------------------------------------------------------------------------
+// */
+.page-hero-option-2{
+ // to reduce the white space in the next section when the option 2 is selected
+  margin-bottom: -5rem;
+    .page-header-panel {
+      padding: 2rem 3rem 2rem 3rem!important;
+      top: 3rem !important;
+       min-height: auto;
+  }
+  h1{
+    margin-bottom: 0!important;
+  }
+
+
+$clip_path_pane--left-short: polygon(100% 0,100% 80%,95% 100%,0% 100%,0 0);
+.pane-position-left {
+  position: relative;
+  overflow: hidden;
+  -webkit-clip-path: $clip_path_pane--left-short;
+  clip-path: $clip_path_pane--left-short;
+  padding-right: 5rem;
+  padding-bottom: 4rem;
+}
+// small device
+  @media only screen and (max-width: 550px) {
+      .header-banner {
+        height: auto!important;
+        min-height: 350px;
+    }
+  }
+
+}
+
+
+
+
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | Styles can be used in editor
+//  |--------------------------------------------------------------------------
+// */
+.text-white {
+  color: #ffffff !important;
+}
+.text-bold {
+  font-weight: 600 !important;
+}
+
+ul.cke-bullet-points-red {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  li {
+    display: flex;
+    padding-bottom: 5px;
+    font-weight: 600;
+    &:before {
+      font-family: "fa-trendy" !important;
+      font-weight: 400;
+      content: "\f0da";
+      padding-right: 0.5rem;
+      color: $red;
+    }
+  }
+}
+
+ul.cke-bullet-points-white {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  li {
+    padding-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+    &:before {
+      font-family: "fa-trendy" !important;
+      font-weight: 400;
+      content: "\f0da";
+      padding-right: 0.5rem;
+      color: #ffffff;
+    }
+  }
+}
+.text-bright-blue {
+  color: #1a2baf;
+}
+.margin-auto{
+  margin: auto;
+}
+
+.round-corner {
+  border-radius: 10px;
+}
+// table
+.table-responsive {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  th, td {
+    padding: 15px 20px;
+  }
+  .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+}
+td {
+  border-top: 1px solid #ddd;
+}
+ td:nth-of-type(1) {
+  border-right: 1px solid #ccc;
+  font-weight: 700;
+
+}
+td:nth-of-type(2), th:nth-of-type(2) , th:nth-of-type(1) {
+  border-right: 1px solid #ccc;
+}
+
+}
+
+.generic-page-template {
+    .paragraph--type--section-body-text li {
+      display: flex;
+      padding-bottom: 5px;
+      font-weight: 600;
+      p {
+        margin-bottom: 0;
+      }
+  }
+  .paragraph--type--section-body-text li:before {
+    padding-top: 7px;
+}
+  .btn-primary {
+    color: #fff;
+    background-color: $red;
+    border-color: $red;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: .5rem 2rem;
+    &:hover{
+    border-color: #d20036;
+    background-color: #d20036;
+    }
+  }
+}
+
+
+
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | UF slider section adjustment
+//  |--------------------------------------------------------------------------
+// */
+.uberflip-slide {
+  @media (min-width: 1400px) {
+    max-width: 510px;
+  }
+  img {
+    max-height: 270px;
+  }
+}
+
+// //*
+//  |--------------------------------------------------------------------------
+//  | Styles for cta second banner
+//  |--------------------------------------------------------------------------
+// */
+.second-cta-section {
+  .row {
+    align-items: center;
+  }
+  background: url("../img/bg/open-broadband-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+  button {
+    a{
+    color: white;
+    }
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    display: flex;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: white;
+      a {
+        color: rgb(221, 28, 76);
+      }
+    }
+  }
+  a {
+    padding: 8px 30px;
+    text-decoration: none;
+    &::after {
+      font-family: "fa-trendy";
+      font-weight: 400;
+      content: "\f178";
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+

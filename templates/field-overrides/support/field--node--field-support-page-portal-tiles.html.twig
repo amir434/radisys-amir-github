@@ -1,0 +1,25 @@
+{# tthis is for the Support page List of sub pages tile #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the list contents #}
+<section {{ attributes.addClass(classes, 'support-sub-list','section-space','pb-5','mb-0','pt-5') }}>
+<div class="container">
+<h2 class="text-center mb-4 mb-2">Customer Support Portal Access</h2>
+    <div class="row justify-content-center"> 
+        {# pull contents from paragrapgh #}
+        {% for item in items %}
+            {{ item.content }}
+        {% endfor %}
+        {# end of main contents #}
+    </div>
+  </div>
+</section>
+

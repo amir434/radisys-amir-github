@@ -1,0 +1,26 @@
+{# tthis is for Heading under hero area #}
+{%
+  set classes = [
+    'home-section-title',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+{% if items is not empty %}
+<div class="container overflow-hidden">
+		<div class="col">
+			{% for item in items %}
+          <div {{ attributes.addClass(classes) }}>
+			        {{ item.content }}
+          </div>
+			{% endfor %}
+		 </div>
+</div >
+	{% else %}
+		{# don't print the shape and content #}
+{% endif %}

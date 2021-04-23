@@ -1,0 +1,25 @@
+@import "theme/child_theme_variables"; // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "assets/bootstrap4"; // <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+
+//Optional files - If you don´t use the corresponding scripts/fonts comment em out
+@import "assets/fontawesome/fonts"; // <------- Font Awesome Icon font
+@import "assets/fonts"; // <------- Font Awesome Icon font
+@import "assets/aos"; // <------- AOS
+
+// Any additional imported files //
+@import "theme/global"; // <--------- Add your styles into this file
+@import "theme/header";
+@import "theme/home";
+@import "theme/services";
+@import "theme/partners";
+@import "theme/footer";
+@import "theme/child_theme"; // <--------- Add your styles into this file
+@import "theme/mixin";
+@import "theme/solution";
+@import "theme/portfolio";
+@import "theme/about";
+@import "theme/page";
+@import "theme/executive";
+@import "theme/contact";
+@import "theme/career";
+@import "theme/support";

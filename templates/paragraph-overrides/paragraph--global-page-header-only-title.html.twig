@@ -1,0 +1,48 @@
+{# Paragraph: global page header area shape with page title only #}
+
+{# get the value of shape color #}
+	{% if content.field_page_header_shape_color %}
+{% set color = paragraph.field_page_header_shape_color.value %}
+{% endif %}
+
+
+
+{# get the image url value #}
+	{% if content.field_header_main_bg_image %}
+{% set bg_img = content.field_header_main_bg_image.0['#markup'] %}
+{% endif %}
+
+{%
+  set classes = [
+    'page-hero-option-2',
+    'page-hero-area',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			<div class="header-banner d-flex align-items-center" style="background-image: url('{{ bg_img }}');"> <div class="container">
+				<div class="row">
+					<div class="col col-lg-7 col-xl-7">
+						<div class="page-header-panel info-panel_pane pane-position-left {{ color }}" data-aos="fade-up">
+							<div class="info-panel_pattern position-absolute w-100 h-100"></div>
+							<h1 class="text-white">{{ content.	field_header_main_title}}</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+</div>
+{# displat admin panel #}
+{% if logged_in %}
+<div class="global-hero-banner--edit-tabs edit-option position-relative">
+  <div class="container">
+    {{ drupal_block('local_tasks_block') }}
+  </div>
+</div>
+{% endif %}

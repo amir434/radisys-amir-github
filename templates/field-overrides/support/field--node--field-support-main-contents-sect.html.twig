@@ -1,0 +1,22 @@
+{# tthis is for the Support page main contents section #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+{# begginigg of the main contents #}
+<section {{ attributes.addClass(classes, 'support-page-main-first','section-space','section-space--banner','mb-5','container') }}>
+<div class="row align-items-center justify-content-center"> 
+{# pull contents from paragrapgh #}
+  {% for item in items %}
+      {{ item.content }}
+  {% endfor %}
+  {# end of main contents #}
+  </div>
+</section>
+

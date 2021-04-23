@@ -1,0 +1,26 @@
+{# Support portal pages bottom :3 columns editor #}
+{%
+  set classes = [
+    'support-info-col',
+    'col-lg-4',
+    'my-4',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+
+{# content #}
+ <div {{ attributes.addClass(classes )}} >
+       <div  class="support-info-col-content card bg-white round-corner h-100">
+       <div class="card-body py-5 px-4">
+         <h4 class=" text-bold">{{ content.field_title}}</h4>
+         <span class="red-border"></span>
+         <div class="support-info-editor mt-2">
+          {{ content.field_section_body_text}}
+        </div>
+        </div>
+      </div>
+</div>

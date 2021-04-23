@@ -1,0 +1,24 @@
+name: Radisys
+type: theme
+description: The Radisys Theme
+core: 8.x
+# Defines the base theme
+base theme: classy
+# Defines libraries group in which we can add css/js.
+libraries:
+  - radisys/global-styling
+  - radisys/global-js
+# Regions
+regions:
+  header: Header
+  header_sub: Sub Header
+  hero: Hero Banner
+  content: Content
+  content_second: Content Secont row
+  content_third: Content Third row
+  sidebar_right: Sidebar Right
+  ready_to_learn: Ready to Learn More
+  footer_first: Footer First Column
+  footer_second: Footer Second Column
+  footer_third: Footer Third Column
+  twig_tweak: Twig Tweak Only

@@ -1,0 +1,15 @@
+{# This template is for general page content type #}
+{#Include Header#}
+{% include directory ~ '/templates/includes/header.html.twig' %}
+{#End Include Header#}
+	{# {{ dump(page.content) }} #}
+<div class="layout-container generic-page-template">
+	{{ page.content }}
+<div class="container">
+	{{ page.content_second }}
+</div>
+</div>
+
+{#Include Footer#}
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+{#End Include Footer#}

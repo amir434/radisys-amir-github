@@ -1,0 +1,64 @@
+{# Solution template: Paragraph 50:50 panel #}
+{%
+  set classes = [
+	'paragraph-50-50-wrapper',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# get the value of image url #}
+{% if content.field_diagram_image_optional_ %}
+	{% set diagramImg = content.field_diagram_image_optional_.0['#markup'] %}
+{% endif %}
+
+<div {{ attributes.addClass(classes ,'wrapper')}}>
+	<div class="wrapper">
+		<div class="container">
+			{% if '(Option 1)' in paragraph.field_block_content.value %}
+				{% set classBlock = 'uberflip_panel' %}
+			{% elseif '(Option 2)' in paragraph.field_block_content.value %}
+				{% set classBlock = 'video_panel' %}
+			{% elseif '(Option 3)' in paragraph.field_block_content.value %}
+				{% set classBlock = 'key-benefits_panel' %}
+			{% else %}
+				{% set classBlock = 'image_panel' %}
+			{% endif %}
+			<div class="row {{classBlock}}">
+				<div class="col-lg-6 regular-side-panel">
+					<h6 class="text-blue font-weight-bold text-uppercase text-sm">{{paragraph.field_mini_label.value}}</h6>
+					{# add ID from backend to jump specific section from nav #}
+					<h2 class="page-anchor" id="{{ paragraph.field_section_id.value }}">{{paragraph.field_title_solutions_pane.value}}</h2>
+					<div class="paragraph-50-50--body text-lightgray mt-4">
+					{{content.field_solution_body_text}}
+					</div>
+					<h4 class="bullet-point-title">{{paragraph.field_bullet_point_title.value}}</h4>
+					{{content.field_bullet_point_item}}
+				</div>
+				<div class="col-lg-6 side-pane-dynamic" data-aos="fade-up">
+					<div class="uberflip--item_pane">
+						{{content.field_uberflip_item_id}}
+						<div class="uberflip--item_pane_img">
+							{{content.field_uberflip_image}}
+						</div>
+					</div>
+					{{content.field_image}}
+					{{content.field_video_embed}}
+					{{content.field_key_benefits}}
+				</div>
+			</div>
+			{# add another row when optional diagram image is added #}
+			{% if diagramImg is not empty %}
+				<div class="row optional-image--wrapper">
+					<div class="col optional-image">
+						<img src="{{ diagramImg }}" alt="diagram image">
+					</div>
+				</div>
+				{% else %}
+				{# nothing  #}
+			{% endif %}
+		</div>
+	</div>
+</div>

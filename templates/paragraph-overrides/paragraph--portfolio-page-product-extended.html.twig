@@ -1,0 +1,53 @@
+{# Portofolio page: additional option to add in product section #}
+{%
+  set classes = [
+    'portfolio-product-extended--wrapper',
+    'portfolio-production--wrapper',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{# get the link #}
+{# {% set link = paragraph.field_option_page_link.value.0['uri'] %}  #}
+{% set link = content.field_option_page_link.0['#title'] %} 
+{% set logo  = content.field_product_logo.0['#markup'] %} 
+
+{# {% set link = content.field_option_page_link.0 %} #}
+{# {{ dump(paragraph.field_option_page_link)}} #}
+{# {{ dump(content.field_option_page_link.0['#title'])}} #}
+
+
+
+
+{# long contents instead of product : portofolio product -- extended  #}
+<div {{ attributes.addClass(classes) }} >
+{# generate link when the product page only exsist #}
+ {% if link is not empty %}
+	<a href="{{ link }}" class="no-under-line">
+{% endif %}
+	<div class="portfolio-production position-relative overflow-hidden shadow-md bg-gradient--{% spaceless %}{{content.field_color|render|remove_html_comments}}{% endspaceless %}">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="info-panel_pattern position-absolute w-100 h-100"></div>
+				<div class="portfolio-production--content_wrapper h-100 d-flex align-items-center">
+					<div class="portfolio-production--content">
+						<div class="portofolio-content-long py-3">{{ content.field_product_description_long }}</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 p-0">
+				<div class="portfolio-production--bg h-100 w-100 d-flex align-items-center  justify-content-center" style="background-image: url('{% spaceless %}{{content.field_product_image|render|remove_html_comments}}{% endspaceless %}')">
+				{% if logo is not empty %}
+					<img src="{{ logo }}" alt="product logo">
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{# generate close link if product page exsist #}
+	{% if link is not empty %}
+</a>
+{% endif %}
+</div>

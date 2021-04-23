@@ -1,0 +1,37 @@
+{# This template is for 404 page #}
+{#Include Header#}
+{% include directory ~ '/templates/includes/header.html.twig' %}
+{#End Include Header#}
+{# {{ dump(page.content) }} #}
+	<div class="layout-container error-404-page">
+     <div class="header-banner" style="background-image: url('/sites/default/files/2021-02/RSYS_Page_Header_OLTs_HEADER-1920x450.jpg');">
+		<div class="container ">
+			<div class="row">
+				<div class="col col-lg-7 col-xl-7">
+					<div class="page-header-panel info-panel_pane pane-position-left info-panel_pane--pink-purple aos-init aos-animate" data-aos="fade-up">
+						<div class="info-panel_pattern position-absolute w-100 h-100"></div>
+						<h1 class="text-white">
+						The page you were looking for cannot be found
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container section-space--banner">
+		<div class="row">
+			<div class="col-lg-7">
+                <h2 class="mb-2">The page you were looking for cannot be found</h2>
+				<p class="mb-5">Sorry, we didn’t find the page you were looking for. It may have been moved or removed from the site. Please check the URL in the address bar for errors.</p>
+                <a class="mt-4 text-white btn btn-gradient " href="/home">Go back to Home<span class="icon-long-arrow-righttrendy"></span></a>
+            </div>
+            <div class="col-lg-5">
+                <img src="{{ base_path ~ directory }}/img/bg/404-page-image.png" alt="error 404 image" class="mx-4 w-full mt-4"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+{#Include Footer#}
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+{#End Include Footer#}

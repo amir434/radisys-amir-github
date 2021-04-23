@@ -1,0 +1,44 @@
+/* **********************************
+  
+  styles for CAreer page
+  
+  ****************************************/
+
+  .career-page {
+    .node__submitted {
+      display: none;
+    }
+    h3.sub-header {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #334c9d;
+    }
+    //adjust spacing in 3rd section in career page
+    .radisys-five-pillers-section {
+    @include media-breakpoint-up(lg) {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+      }
+    }
+    // adjust spacing for first section
+    .field--name-field-page-contents {
+        padding: .5rem 3rem;
+    }
+  }
+    // second sectoin: overwride about open radisys section
+  .career-second-section {
+    img {
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        min-height: 300px;
+        position: relative;
+        height: auto;
+        width: 100%;
+          box-shadow: 1px 15px 20px rgba(20, 30, 36, 0.3) !important;
+        // lg
+        @include media-breakpoint-up(lg) {
+          min-height: 400px;
+        }
+    }
+  }

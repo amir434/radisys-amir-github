@@ -1,0 +1,62 @@
+{# PArtner single: Pull ARticle from UF #}
+{%
+  set classes = [
+    'card',
+    'partner-uf',
+    'pt-3',
+    'shadow',
+     'partner-card',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+
+<div class="uberflip-table">
+<h3 class="uberflip-section--title mb-4"><span>Solutions Showcase<span></h3>
+<div class="uf-cards-wrapper">
+{% for item in items %}
+{% set uberFlipID %}
+ {{- item.content -}}
+ {% endset %} 
+ {# values for UF item #}
+ {% set ufImg %}
+ {{ get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['thumbnail_url']  }}
+ {% endset %} 
+ {% set ufUrl %}
+ {{ get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['url']  }}
+ {% endset %} 
+  {% set ufTitle %}
+ {{ get_uberflip_item('bbec2e61e2f220ba85c07fc46239d09406b1bb1e',uberFlipID)['title']  }}
+ {% endset %} 
+
+        <div {{ attributes.addClass(classes) }}>
+                <a href="{{ ufUrl }}">
+                    <img src="{{ ufImg  }}" alt="UFimage" class="card-uf-image card-img-top">
+                </a>
+                    <div class="card-block px-4 pb-4 pt-3 card-body">
+                            <a href="{{ ufUrl }}">
+                            <h4 class="mb-2 partner-uf-title">
+                                {{ ufTitle }}
+                            </h4>
+                            </a>
+                        <a class="uberflip--a" href="{{ ufUrl }}"> Read More <span class="icon-long-arrow-righttrendy"></span></a>
+                    </div>
+            </div>
+            
+{% endfor %}
+</div>
+ </div>
+
+
+
+  {# closing divfor col-6 #}
+    </div>
+    {# closing row #}
+    </div>
+    {# closing containet #}
+    </div>
+
